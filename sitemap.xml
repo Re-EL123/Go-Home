@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- Homepage -->
   <url>
-    <loc>https://re-el.branding.rf.gd/</loc>
-    <priority>1.0</priority>
+    <loc>https://www.re-el-branding.rf.gd/</loc>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://www.re-el-branding.rf.gd/logo.jpg</image:loc>
+      <image:caption>Main Site Logo</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Additional pages inside /website/ -->
+  <url>
+    <loc>https://www.re-el-branding.rf.gd/website/index.html</loc>
+    <priority>0.80</priority>
     <changefreq>weekly</changefreq>
   </url>
 
+  <!-- Example if there are specific pages in /website/ -->
+  <!-- Replace these with real filenames from your repo -->
   <url>
-    <loc>https://re-el.branding.rf.gd/services.html</loc>
-    <priority>0.9</priority>
+    <loc>https://www.re-el-branding.rf.gd/website/services.html</loc>
+    <priority>0.75</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://re-el.branding.rf.gd/portfolio.html</loc>
-    <priority>0.8</priority>
+    <loc>https://www.re-el-branding.rf.gd/website/portfolio.html</loc>
+    <priority>0.75</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://re-el.branding.rf.gd/about.html</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://re-el.branding.rf.gd/contact.html</loc>
-    <priority>0.7</priority>
+    <loc>https://www.re-el-branding.rf.gd/website/contact.html</loc>
+    <priority>0.70</priority>
     <changefreq>yearly</changefreq>
   </url>
 
+  <!-- If you have more content pages, add them here -->
 </urlset>
