@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1a1a2e; /* Deep navy foundation */
+  --color-secondary: #2d3748; /* Subtle depth */
+  --color-accent: #FFD700; /* Energetic yellow */
+  
+  /* Background Colors */
+  --color-background: #ffffff; /* Clean canvas */
+  --color-surface: #f7fafc; /* Gentle elevation */
+  
+  /* Text Colors */
+  --color-text-primary: #2d3748; /* Comfortable reading */
+  --color-text-secondary: #718096; /* Clear hierarchy */
+  
+  /* Status Colors */
+  --color-success: #38a169; /* Positive reinforcement */
+  --color-warning: #d69e2e; /* Gentle urgency */
+  --color-error: #e53e3e; /* Helpful concern */
+  
+  /* Border Colors */
+  --color-border: #e2e8f0; /* Minimal borders */
+  --color-border-accent: #FFD700; /* Featured content */
+  
+  /* Shadow Colors */
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-primary);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary font-poppins font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:shadow-elevated;
+  }
+  
+  .btn-secondary {
+    @apply bg-primary text-white font-poppins font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out hover:bg-secondary;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 shadow-subtle transition-all duration-300 ease-out hover:shadow-elevated;
+  }
+  
+  .input-field {
+    @apply border border-border-default rounded-lg px-4 py-3 font-inter focus:border-accent focus:outline-none transition-all duration-200 ease-out;
+  }
+  
+  .text-accent-highlight {
+    @apply text-accent font-inter font-semibold;
+  }
+}
+
+@layer utilities {
+  .animation-reveal {
+    animation: reveal 400ms ease-out;
+  }
+  
+  .animation-hover {
+    transition: all 200ms ease-out;
+  }
+  
+  .animation-state {
+    transition: all 300ms ease-out;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------- */
+/* Fade-Up Animation */
+/* --------------------------------------------- */
+@keyframes fadeUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+.fade-up-delay-1 {
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.fade-up-delay-2 {
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+}
+

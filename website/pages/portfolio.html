@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Re-EL Digital Agency | Transformation Case Studies</title>
+    <meta name="description" content="Explore Re-EL's portfolio of brand transformations. See before/after case studies, client success stories, and measurable business impact across South Africa." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Freeldigi5171back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="font-inter text-text-primary bg-background">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border-default">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+              <!-- Logo -->
+            <div class="flex items-center space-x-3">
+               <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+    <img src="../public/assets/images/logo-no-bg.png" alt="icon" class="w-6 h-6 object-contain">
+</div>
+                <span class="font-poppins font-bold text-xl text-primary">Re-EL</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="homepage.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Home</a>
+                <a href="services.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Services</a>
+                <a href="portfolio.html" class="font-medium text-primary hover:text-accent transition-colors">Portfolio</a>
+                <a href="about.html" class="font-medium text-text-secondary hover:text-accent transition-colors">About</a>
+                <a href="client_success_stories.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Success Stories</a>
+                <a href="contact.html" class="btn-primary">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2" id="mobile-menu-btn">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-background border-t border-border-default" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="homepage.html" class="block py-2 font-medium text-text-secondary">Home</a>
+                <a href="services.html" class="block py-2 font-medium text-text-secondary">Services</a>
+                <a href="portfolio.html" class="block py-2 font-medium text-primary">Portfolio</a>
+                <a href="about.html" class="block py-2 font-medium text-text-secondary">About</a>
+                <a href="client_success_stories.html" class="block py-2 font-medium text-text-secondary">Success Stories</a>
+                <a href="contact.html" class="block py-2 font-medium text-accent">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary to-secondary text-white overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid)"/>
+            </svg>
+        </div>
+        
+        <div class="relative container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <!-- Hero Icon -->
+                <div class="mb-6 flex justify-center">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <h1 class="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+                    Transformation <span class="text-accent">Portfolio</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                    Witness the power of transformation through our comprehensive case studies. Real clients, real results, real impact on business growth.
+                </p>
+                
+                <!-- Portfolio Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">150+</div>
+                        <div class="text-sm text-gray-300">Projects Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">98%</div>
+                        <div class="text-sm text-gray-300">Client Satisfaction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">340%</div>
+                        <div class="text-sm text-gray-300">Average ROI Increase</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">24/7</div>
+                        <div class="text-sm text-gray-300">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Section -->
+    <section class="py-12 bg-surface border-b border-border-default">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <!-- Search Bar -->
+                <div class="mb-8">
+                    <div class="relative max-w-md mx-auto">
+                        <input type="text" placeholder="Search projects..." class="input-field w-full pl-12 pr-4" id="portfolio-search" />
+                        <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
+                            <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Filter Categories -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Industry Filter -->
+                    <div>
+                        <h3 class="font-poppins font-semibold text-lg mb-4 text-primary">Industry</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="industry" data-value="all" checked />
+                                <span class="ml-3 text-text-primary">All Industries</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="industry" data-value="tech" />
+                                <span class="ml-3 text-text-secondary">Technology</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="industry" data-value="retail" />
+                                <span class="ml-3 text-text-secondary">Retail & E-commerce</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="industry" data-value="healthcare" />
+                                <span class="ml-3 text-text-secondary">Healthcare</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="industry" data-value="finance" />
+                                <span class="ml-3 text-text-secondary">Finance</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Type Filter -->
+                    <div>
+                        <h3 class="font-poppins font-semibold text-lg mb-4 text-primary">Service Type</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="service" data-value="all" checked />
+                                <span class="ml-3 text-text-primary">All Services</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="service" data-value="branding" />
+                                <span class="ml-3 text-text-secondary">Brand Identity</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="service" data-value="web" />
+                                <span class="ml-3 text-text-secondary">Web Development</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="service" data-value="app" />
+                                <span class="ml-3 text-text-secondary">App Development</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="service" data-value="graphics" />
+                                <span class="ml-3 text-text-secondary">Graphic Design</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Size Filter -->
+                    <div>
+                        <h3 class="font-poppins font-semibold text-lg mb-4 text-primary">Business Size</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="size" data-value="all" checked />
+                                <span class="ml-3 text-text-primary">All Sizes</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="size" data-value="startup" />
+                                <span class="ml-3 text-text-secondary">Startup</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="size" data-value="sme" />
+                                <span class="ml-3 text-text-secondary">SME</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" class="filter-checkbox" data-filter="size" data-value="enterprise" />
+                                <span class="ml-3 text-text-secondary">Enterprise</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Clear Filters Button -->
+                <div class="mt-8 text-center">
+                    <button class="btn-secondary" id="clear-filters">
+                        <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Clear All Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section class="py-20 bg-background">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-3xl md:text-5xl mb-6">Featured Transformations</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Discover how we've helped businesses across South Africa transform their digital presence and achieve remarkable growth.
+                </p>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto" id="portfolio-grid">
+                <!-- Case Study 1: Ubuntu Tech Solutions -->
+                <div class="portfolio-item card group cursor-pointer" data-industry="tech" data-service="branding web" data-size="sme" onclick="openCaseStudy('ubuntu-tech')">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <div class="grid grid-cols-2 gap-2 h-64">
+                            <!-- Before Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2826&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ubuntu Tech Solutions - Before" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div class="absolute top-2 left-2 bg-error text-white px-2 py-1 rounded text-xs font-semibold">BEFORE</div>
+                            </div>
+                            <!-- After Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ubuntu Tech Solutions - After" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg'; this.onerror=null;" />
+                                <div class="absolute top-2 right-2 bg-success text-white px-2 py-1 rounded text-xs font-semibold">AFTER</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                <p class="font-semibold">View Case Study</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-poppins font-bold text-xl text-primary">Ubuntu Tech Solutions</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-accent text-primary px-2 py-1 rounded text-xs font-semibold">TECH</span>
+                                <span class="bg-primary text-white px-2 py-1 rounded text-xs font-semibold">SME</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-text-secondary">Complete brand transformation including logo design, website development, and digital marketing strategy for a growing tech startup.</p>
+                        
+                        <!-- Impact Metrics -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">340%</div>
+                                <div class="text-xs text-text-secondary">Revenue Growth</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">85%</div>
+                                <div class="text-xs text-text-secondary">Lead Increase</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">6 Mo</div>
+                                <div class="text-xs text-text-secondary">Timeline</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Client Quote -->
+                        <blockquote class="italic text-text-secondary border-l-4 border-accent pl-4">
+                            "Re-EL transformed our entire digital presence beyond our expectations."
+                        </blockquote>
+                        <div class="text-sm text-primary font-semibold">- Sibusiso Ndlovu, CEO</div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2: Mzansi Connect App -->
+                <div class="portfolio-item card group cursor-pointer" data-industry="tech" data-service="app branding" data-size="startup" onclick="openCaseStudy('mzansi-connect')">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <div class="grid grid-cols-2 gap-2 h-64">
+                            <!-- Before Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mzansi Connect App - Before" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div class="absolute top-2 left-2 bg-error text-white px-2 py-1 rounded text-xs font-semibold">BEFORE</div>
+                            </div>
+                            <!-- After Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mzansi Connect App - After" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg'; this.onerror=null;" />
+                                <div class="absolute top-2 right-2 bg-success text-white px-2 py-1 rounded text-xs font-semibold">AFTER</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                <p class="font-semibold">View Case Study</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-poppins font-bold text-xl text-primary">Mzansi Connect App</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-accent text-primary px-2 py-1 rounded text-xs font-semibold">TECH</span>
+                                <span class="bg-primary text-white px-2 py-1 rounded text-xs font-semibold">STARTUP</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-text-secondary">Mobile app development with user experience design, brand identity creation, and launch strategy for a social networking platform.</p>
+                        
+                        <!-- Impact Metrics -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">50K+</div>
+                                <div class="text-xs text-text-secondary">Downloads</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">4.8★</div>
+                                <div class="text-xs text-text-secondary">App Rating</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">3 Mo</div>
+                                <div class="text-xs text-text-secondary">Timeline</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Client Quote -->
+                        <blockquote class="italic text-text-secondary border-l-4 border-accent pl-4">
+                            "They helped us understand our users and create an experience that drives engagement."
+                        </blockquote>
+                        <div class="text-sm text-primary font-semibold">- Lungs Sithole, Founder</div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3: HealthCare Plus -->
+                <div class="portfolio-item card group cursor-pointer" data-industry="healthcare" data-service="web branding" data-size="sme" onclick="openCaseStudy('healthcare-plus')">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <div class="grid grid-cols-2 gap-2 h-64">
+                            <!-- Before Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="HealthCare Plus - Before" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div class="absolute top-2 left-2 bg-error text-white px-2 py-1 rounded text-xs font-semibold">BEFORE</div>
+                            </div>
+                            <!-- After Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2831&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="HealthCare Plus - After" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/10/04/09/56/laboratory-2815641_1280.jpg'; this.onerror=null;" />
+                                <div class="absolute top-2 right-2 bg-success text-white px-2 py-1 rounded text-xs font-semibold">AFTER</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                <p class="font-semibold">View Case Study</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-poppins font-bold text-xl text-primary">HealthCare Plus</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-accent text-primary px-2 py-1 rounded text-xs font-semibold">HEALTHCARE</span>
+                                <span class="bg-primary text-white px-2 py-1 rounded text-xs font-semibold">SME</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-text-secondary">Healthcare website redesign with patient portal integration, appointment booking system, and comprehensive brand refresh.</p>
+                        
+                        <!-- Impact Metrics -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">250%</div>
+                                <div class="text-xs text-text-secondary">Patient Bookings</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">95%</div>
+                                <div class="text-xs text-text-secondary">User Satisfaction</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">4 Mo</div>
+                                <div class="text-xs text-text-secondary">Timeline</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Client Quote -->
+                        <blockquote class="italic text-text-secondary border-l-4 border-accent pl-4">
+                            "Our patients love the new booking system and professional appearance."
+                        </blockquote>
+                        <div class="text-sm text-primary font-semibold">- Dr. Nomsa Mthembu, Director</div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 4: RetailMax -->
+                <div class="portfolio-item card group cursor-pointer" data-industry="retail" data-service="web graphics" data-size="enterprise" onclick="openCaseStudy('retailmax')">
+                    <div class="relative overflow-hidden rounded-lg mb-6">
+                        <div class="grid grid-cols-2 gap-2 h-64">
+                            <!-- Before Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="RetailMax - Before" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div class="absolute top-2 left-2 bg-error text-white px-2 py-1 rounded text-xs font-semibold">BEFORE</div>
+                            </div>
+                            <!-- After Image -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="RetailMax - After" class="w-full h-full object-cover transition-transform group-hover:scale-105" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_1280.jpg'; this.onerror=null;" />
+                                <div class="absolute top-2 right-2 bg-success text-white px-2 py-1 rounded text-xs font-semibold">AFTER</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                                <p class="font-semibold">View Case Study</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-poppins font-bold text-xl text-primary">RetailMax</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-accent text-primary px-2 py-1 rounded text-xs font-semibold">RETAIL</span>
+                                <span class="bg-primary text-white px-2 py-1 rounded text-xs font-semibold">ENTERPRISE</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-text-secondary">E-commerce platform development with inventory management, payment integration, and comprehensive digital marketing materials.</p>
+                        
+                        <!-- Impact Metrics -->
+                        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">180%</div>
+                                <div class="text-xs text-text-secondary">Online Sales</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">65%</div>
+                                <div class="text-xs text-text-secondary">Conversion Rate</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-accent">8 Mo</div>
+                                <div class="text-xs text-text-secondary">Timeline</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Client Quote -->
+                        <blockquote class="italic text-text-secondary border-l-4 border-accent pl-4">
+                            "The new e-commerce platform exceeded our sales projections significantly."
+                        </blockquote>
+                        <div class="text-sm text-primary font-semibold">- Thabo Molefe, CEO</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-primary" id="load-more-btn">
+                    Load More Projects
+                    <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Testimonials Section -->
+    <section class="py-20 bg-surface">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-poppins font-bold text-3xl md:text-5xl mb-6">Client Success Stories</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Hear directly from our clients about their transformation journey and the impact on their business growth.
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Sibusiso Ndlovu Testimonial -->
+                <div class="card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sibusiso Ndlovu" class="w-16 h-16 rounded-full object-cover border-4 border-accent mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-poppins font-semibold text-lg text-primary">Sibusiso Ndlovu</h3>
+                            <p class="text-text-secondary">CEO, Ubuntu Tech Solutions</p>
+                            <div class="flex text-accent mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-lg text-text-primary mb-6 italic">
+                        "Re-EL transformed our entire digital presence. From a basic website to a comprehensive brand identity that truly represents our values. The team understood our vision and brought it to life beyond our expectations. Our revenue increased by 340% in just 6 months."
+                    </blockquote>
+                    
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">340%</div>
+                            <div class="text-xs text-text-secondary">Revenue Growth</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">85%</div>
+                            <div class="text-xs text-text-secondary">Lead Increase</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">6 Mo</div>
+                            <div class="text-xs text-text-secondary">Timeline</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lungs Sithole Testimonial -->
+                <div class="card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Lungs Sithole" class="w-16 h-16 rounded-full object-cover border-4 border-accent mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div>
+                            <h3 class="font-poppins font-semibold text-lg text-primary">Lungs Sithole</h3>
+                            <p class="text-text-secondary">Founder, Mzansi Connect App</p>
+                            <div class="flex text-accent mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <blockquote class="text-lg text-text-primary mb-6 italic">
+                        "Working with Re-EL was a game-changer for our startup. They didn't just design our app – they helped us understand our users and create an experience that drives engagement. We achieved 50,000+ downloads in our first month."
+                    </blockquote>
+                    
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-border-default">
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">50K+</div>
+                            <div class="text-xs text-text-secondary">Downloads</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">4.8★</div>
+                            <div class="text-xs text-text-secondary">App Rating</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-xl font-bold text-accent">3 Mo</div>
+                            <div class="text-xs text-text-secondary">Timeline</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="client_success_stories.html" class="btn-primary">View All Success Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-poppins font-bold text-3xl md:text-5xl mb-6">Ready to Transform Your Brand?</h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                    Join the ranks of successful businesses who have transformed their digital presence with Re-EL. Your transformation story starts here.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="contact.html" class="btn-primary text-lg px-8 py-4">Start Your Transformation</a>
+                    <a href="services.html" class="btn-secondary text-lg px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary">Explore Services</a>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
+                    <a href="tel:0813864024" class="flex items-center hover:text-accent transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                        </svg>
+                        081 386 4024
+                    </a>
+                    <span class="hidden sm:block">|</span>
+                    <span>Available 24/7 for consultations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                                    <img 
+            src="../public/assets/images/celebrate.png" 
+            alt="Celebration Icon"
+            class="w-8 h-8 object-contain"
+        />
+                        </div>
+                        <span class="font-poppins font-bold text-xl">Re-EL</span>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">Building legacies through art and technology. Your transformation catalyst in South Africa and beyond.</p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-400 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="font-poppins font-semibold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="text-gray-300 hover:text-accent transition-colors">Graphic Design</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-accent transition-colors">Web Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-accent transition-colors">App Development</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-accent transition-colors">Brand Strategy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="font-poppins font-semibold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-accent transition-colors">Portfolio</a></li>
+                        <li><a href="client_success_stories.html" class="text-gray-300 hover:text-accent transition-colors">Success Stories</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-poppins font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                            </svg>
+                            <a href="tel:0813864024" class="hover:text-accent transition-colors">081 386 4024</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                            </svg>
+                            akanishibiri4422@gmail.com
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-4 h-4 mr-2 mt-0.5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
+                            </svg>
+                            Johannesburg, South Africa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 Re-EL Digital Agency. All Rights Reserved. | Building legacies through art and technology.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div id="case-study-modal" class="fixed inset-0 bg-primary/80 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-background rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-poppins font-bold text-2xl text-primary" id="modal-title">Case Study Details</h3>
+                        <button class="text-text-secondary hover:text-primary" onclick="closeCaseStudy()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="modal-content">
+                        <!-- Content will be dynamically loaded -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Filtering
+        const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const searchInput = document.getElementById('portfolio-search');
+
+        function filterPortfolio() {
+            const activeFilters = {
+                industry: [],
+                service: [],
+                size: []
+            };
+
+            // Collect active filters
+            filterCheckboxes.forEach(checkbox => {
+                if (checkbox.checked && checkbox.dataset.value !== 'all') {
+                    activeFilters[checkbox.dataset.filter].push(checkbox.dataset.value);
+                }
+            });
+
+            const searchTerm = searchInput.value.toLowerCase();
+
+            portfolioItems.forEach(item => {
+                let showItem = true;
+
+                // Check industry filter
+                if (activeFilters.industry.length > 0) {
+                    const itemIndustries = item.dataset.industry.split(' ');
+                    showItem = showItem && activeFilters.industry.some(filter => itemIndustries.includes(filter));
+                }
+
+                // Check service filter
+                if (activeFilters.service.length > 0) {
+                    const itemServices = item.dataset.service.split(' ');
+                    showItem = showItem && activeFilters.service.some(filter => itemServices.includes(filter));
+                }
+
+                // Check size filter
+                if (activeFilters.size.length > 0) {
+                    showItem = showItem && activeFilters.size.includes(item.dataset.size);
+                }
+
+                // Check search term
+                if (searchTerm) {
+                    const itemText = item.textContent.toLowerCase();
+                    showItem = showItem && itemText.includes(searchTerm);
+                }
+
+                item.style.display = showItem ? 'block' : 'none';
+            });
+        }
+
+        // Add event listeners
+        filterCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Handle "All" checkboxes
+                if (this.dataset.value === 'all') {
+                    const filterType = this.dataset.filter;
+                    const relatedCheckboxes = document.querySelectorAll(`[data-filter="${filterType}"]`);
+                    relatedCheckboxes.forEach(cb => {
+                        if (cb !== this) cb.checked = false;
+                    });
+                } else {
+                    // Uncheck "All" when specific filter is selected
+                    const allCheckbox = document.querySelector(`[data-filter="${this.dataset.filter}"][data-value="all"]`);
+                    if (allCheckbox) allCheckbox.checked = false;
+                }
+                filterPortfolio();
+            });
+        });
+
+        searchInput.addEventListener('input', filterPortfolio);
+
+        // Clear Filters
+        document.getElementById('clear-filters').addEventListener('click', function() {
+            filterCheckboxes.forEach(checkbox => {
+                checkbox.checked = checkbox.dataset.value === 'all';
+            });
+            searchInput.value = '';
+            filterPortfolio();
+        });
+
+        // Case Study Modal Functions
+        function openCaseStudy(caseId) {
+            const modal = document.getElementById('case-study-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+
+            // Case study data
+            const caseStudies = {
+                'ubuntu-tech': {
+                    title: 'Ubuntu Tech Solutions - Complete Digital Transformation',
+                    content: `
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-lg mb-3">Challenge</h4>
+                                    <p class="text-text-secondary">Ubuntu Tech Solutions needed a complete brand overhaul to compete in the growing South African tech market. Their existing website was outdated and didn't reflect their innovative solutions.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-lg mb-3">Solution</h4>
+                                    <p class="text-text-secondary">We created a comprehensive brand identity, developed a modern responsive website, and implemented a digital marketing strategy that positioned them as industry leaders.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-surface p-6 rounded-lg">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">340%</div>
+                                    <div class="text-sm text-text-secondary">Revenue Increase</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">85%</div>
+                                    <div class="text-sm text-text-secondary">More Leads</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">6</div>
+                                    <div class="text-sm text-text-secondary">Months Timeline</div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                },
+                'mzansi-connect': {
+                    title: 'Mzansi Connect App - Social Platform Success',
+                    content: `
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-lg mb-3">Challenge</h4>
+                                    <p class="text-text-secondary">Creating a social networking app that resonates with South African users while competing with established international platforms.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-lg mb-3">Solution</h4>
+                                    <p class="text-text-secondary">We developed a culturally relevant app with intuitive UX design, implemented local language support, and created a launch strategy targeting South African communities.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 bg-surface p-6 rounded-lg">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">50K+</div>
+                                    <div class="text-sm text-text-secondary">Downloads</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">4.8★</div>
+                                    <div class="text-sm text-text-secondary">App Store Rating</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-accent mb-2">3</div>
+                                    <div class="text-sm text-text-secondary">Months Timeline</div>
+                                </div>
+                            </div>
+                        </div>
+                    `
+                }
+            };
+
+            const caseData = caseStudies[caseId];
+            if (caseData) {
+                modalTitle.textContent = caseData.title;
+                modalContent.innerHTML = caseData.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeCaseStudy() {
+            const modal = document.getElementById('case-study-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('case-study-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCaseStudy();
+            }
+        });
+
+        // Load More Functionality
+        document.getElementById('load-more-btn').addEventListener('click', function() {
+            // Simulate loading more projects
+            this.innerHTML = '<svg class="w-5 h-5 mr-2 inline animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>Loading...';
+            
+            setTimeout(() => {
+                this.innerHTML = 'All Projects Loaded <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                this.disabled = true;
+                this.classList.add('opacity-50', 'cursor-not-allowed');
+            }, 2000);
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-elevated');
+            } else {
+                header.classList.remove('shadow-elevated');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
