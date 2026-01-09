@@ -1,178 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Re-EL - Get in Touch with Our Digital Agency</title>
-    <meta name="description" content="Contact Re-EL Digital Agency. We're here to help with your digital solutions. Call us or fill out our contact form for a free consultation." />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Freeldigi5171back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
-    <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Re-EL - Book Consultation & Service Enquiry</title>
+    <meta name="description" content="Get in touch with Re-EL. Book a consultation or submit a service enquiry for software development, branding, or design services.">
+    <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
-<body class="font-inter text-text-primary bg-background">
+<body>
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border-default">
-        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                    <img src="../public/assets/images/logo-no-bg.png" alt="icon" class="w-6 h-6 object-contain">
-                </div>
-                <span class="font-poppins font-bold text-xl text-primary">Re-EL</span>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../public/assets/images/logo-no-bg.png" alt="Re-EL" style="height: 40px; width: auto; display: inline;">
+                <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
             </div>
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="homepage.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Home</a>
-                <a href="services.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Services</a>
-                <a href="portfolio.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Portfolio</a>
-                <a href="about.html" class="font-medium text-text-secondary hover:text-accent transition-colors">About</a>
-                <a href="client_success_stories.html" class="font-medium text-text-secondary hover:text-accent transition-colors">Success Stories</a>
-                <a href="contact.html" class="btn-primary">Contact</a>
-            </div>
-        </nav>
+            <nav>
+                <a href="homepage.html">Home</a>
+                <a href="homepage.html#services">Services</a>
+                <a href="homepage.html#portfolio">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="cta-button">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="pt-20">
+    <main style="padding-top: 80px;">
         <!-- Hero Section -->
-        <section class="relative min-h-[500px] bg-gradient-to-br from-background via-background to-primary/5 flex items-center overflow-hidden pt-20">
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-20 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-0 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-            </div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="max-w-3xl">
-                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Get In Touch</h1>
-                    <p class="text-xl text-text-secondary mb-8 leading-relaxed">We'd love to hear from you. Whether you have a question about our services or just want to say hello, reach out to us today.</p>
-                </div>
+        <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center;">
+            <div class="container">
+                <h1 style="margin-bottom: 1.5rem; text-align: center;">Let's Work Together</h1>
+                <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Whether you have questions about our services or want to discuss your project, we're here to help.</p>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="py-20 bg-background/50">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <!-- Contact Form -->
-                    <div class="relative bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl border border-accent/20 p-8 hover:border-accent/50 transition-all">
-                        <h2 class="text-3xl font-bold mb-8 text-primary">Send us a Message</h2>
-                        <form class="space-y-6">
-                            <div class="form-group">
-                                <label class="block text-sm font-semibold mb-2 text-text-primary">Your Name</label>
-                                <input type="text" placeholder="John Doe" class="w-full px-4 py-3 bg-background/50 border border-accent/20 rounded-lg focus:border-accent outline-none transition-colors placeholder-text-secondary/50" />
-                            </div>
-                            <div class="form-group">
-                                <label class="block text-sm font-semibold mb-2 text-text-primary">Email Address</label>
-                                <input type="email" placeholder="john@example.com" class="w-full px-4 py-3 bg-background/50 border border-accent/20 rounded-lg focus:border-accent outline-none transition-colors placeholder-text-secondary/50" />
-                            </div>
-                            <div class="form-group">
-                                <label class="block text-sm font-semibold mb-2 text-text-primary">Phone (Optional)</label>
-                                <input type="tel" placeholder="+27 81 386 4024" class="w-full px-4 py-3 bg-background/50 border border-accent/20 rounded-lg focus:border-accent outline-none transition-colors placeholder-text-secondary/50" />
-                            </div>
-                            <div class="form-group">
-                                <label class="block text-sm font-semibold mb-2 text-text-primary">Project Type</label>
-                                <select class="w-full px-4 py-3 bg-background/50 border border-accent/20 rounded-lg focus:border-accent outline-none transition-colors text-text-secondary">
-                                    <option>Select a project type...</option>
-                                    <option>Web Development</option>
-                                    <option>App Development</option>
-                                    <option>Brand Design</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="block text-sm font-semibold mb-2 text-text-primary">Message</label>
-                                <textarea placeholder="Tell us about your project..." rows="5" class="w-full px-4 py-3 bg-background/50 border border-accent/20 rounded-lg focus:border-accent outline-none transition-colors placeholder-text-secondary/50"></textarea>
-                            </div>
-                            <button type="submit" class="btn-primary w-full">Send Message</button>
-                        </form>
-                    </div>
+        <section class="section section-light">
+            <div class="container">
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <h2 style="text-align: center; margin-bottom: 3rem;">Service Enquiry Form</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                        <!-- Contact Form -->
+                        <div class="card">
+                            <h3 style="margin-bottom: 2rem;">Tell us about your project</h3>
+                            <form id="enquiryForm" onsubmit="submitToWhatsApp(event)">
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label>Your Full Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
 
-                    <!-- Contact Information -->
-                    <div class="space-y-8">
-                        <!-- Quick Contact -->
-                        <div class="relative bg-gradient-to-br from-accent/10 to-primary/5 rounded-2xl border border-accent/20 p-8 hover:border-accent/50 transition-all">
-                            <h3 class="text-2xl font-bold mb-6 text-accent">Quick Contact</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <span class="text-2xl mr-4">📞</span>
-                                    <div>
-                                        <p class="text-sm text-text-secondary mb-1">Phone</p>
-                                        <a href="tel:0813864024" class="text-lg font-semibold text-primary hover:text-accent transition-colors">081 386 4024</a>
-                                    </div>
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
                                 </div>
-                                <div class="flex items-start">
-                                    <span class="text-2xl mr-4">✉️</span>
-                                    <div>
-                                        <p class="text-sm text-text-secondary mb-1">Email</p>
-                                        <a href="mailto:hello@reel.com" class="text-lg font-semibold text-primary hover:text-accent transition-colors">hello@reel.com</a>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-2xl mr-4">📍</span>
-                                    <div>
-                                        <p class="text-sm text-text-secondary mb-1">Location</p>
-                                        <p class="text-lg font-semibold text-primary">Johannesburg, South Africa</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Response Time -->
-                        <div class="relative bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl border border-accent/20 p-8 hover:border-accent/50 transition-all">
-                            <h3 class="text-2xl font-bold mb-4 text-primary">Response Time</h3>
-                            <p class="text-text-secondary mb-4">We pride ourselves on quick response times and attentive customer service.</p>
-                            <div class="space-y-3">
-                                <div>
-                                    <p class="text-sm font-semibold text-text-primary mb-1">Business Hours</p>
-                                    <p class="text-text-secondary">Monday - Friday: 9:00 AM - 5:00 PM SAST</p>
+                                <!-- Phone -->
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+27813864024">
                                 </div>
-                                <div>
-                                    <p class="text-sm font-semibold text-text-primary mb-1">Support Available</p>
-                                    <p class="text-text-secondary">24/7 for existing clients</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-background border-t border-border-default text-text-secondary py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h4 class="font-bold text-text-primary mb-4">Re-EL</h4>
-                    <p class="text-sm">Building legacies through art and technology.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-text-primary mb-4">Services</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="services.html" class="hover:text-accent">Web Development</a></li>
-                        <li><a href="services.html" class="hover:text-accent">App Development</a></li>
-                        <li><a href="services.html" class="hover:text-accent">Brand Design</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-text-primary mb-4">Company</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-accent">About</a></li>
-                        <li><a href="portfolio.html" class="hover:text-accent">Portfolio</a></li>
-                        <li><a href="client_success_stories.html" class="hover:text-accent">Success Stories</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-text-primary mb-4">Contact</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="tel:0813864024" class="hover:text-accent">081 386 4024</a></li>
-                        <li><a href="mailto:hello@reel.com" class="hover:text-accent">hello@reel.com</a></li>
-                        <li>Johannesburg, SA</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-border-default pt-8">
-                <p class="text-center text-sm">© 2025 Re-EL Digital Agency. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                                <!-- Company -->
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" id="company" name="company" placeholder="Your Company">
+                                </div>
+
+                                <!-- Service Type -->
+                                <div class="form-group">
+                                
