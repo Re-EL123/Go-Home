@@ -2515,4 +2515,312 @@ form.submitting {
   backdrop-filter: blur(4px);
   animation: fadeUp 0.3s ease-out;
 }
+
+  
+/* ==========================================  */
+/* OUTER SPACE THEME - COSMIC DESIGN */
+/* ==========================================  */
+
+:root {
+  --space-black: #0a0e27;
+  --space-deep: #141829;
+  --space-darker: #1a1f3a;
+  --cosmic-yellow: #FFD700;
+  --cosmic-navy: #1a1a2e;
+  --star-color: #ffffff;
+  --nebula-color: #FFD700;
+}
+
+body {
+  background-color: var(--space-black);
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 60px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 10px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: drift 20s infinite linear;
+}
+
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 200px 0; }
+}
+
+/* Cosmic Starfield Background */
+.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 80%, rgba(26, 26, 46, 0.2) 0%, transparent 50%),
+              linear-gradient(to bottom, #0a0e27 0%, #141829 50%, #1a1f3a 100%);
+  overflow: hidden;
+}
+
+/* Cosmic Glow Effects */
+.cosmic-glow {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3),
+              0 0 60px rgba(255, 215, 0, 0.15),
+              inset 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+.cosmic-glow-sm {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2),
+              inset 0 0 15px rgba(255, 215, 0, 0.05);
+}
+
+/* Nebula/Gradient Effects */
+.nebula-gradient {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 46, 0.8) 0%, 
+    rgba(255, 215, 0, 0.1) 50%, 
+    rgba(26, 26, 46, 0.8) 100%);
+}
+
+/* Pulsing Star Animation */
+@keyframes pulsar {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.star-pulse {
+  animation: pulsar 3s ease-in-out infinite;
+}
+
+/* Outer Space Section Styling */
+.space-section {
+  background: linear-gradient(180deg, 
+    rgba(20, 24, 41, 0.6) 0%, 
+    rgba(26, 26, 46, 0.4) 100%);
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.space-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Cosmic Text Styling */
+.cosmic-text {
+  color: var(--cosmic-yellow);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+               0 0 20px rgba(255, 215, 0, 0.3),
+               2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.cosmic-heading {
+  font-family: 'Poppins', sans-serif;
+  color: var(--cosmic-yellow);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6),
+               0 0 40px rgba(255, 215, 0, 0.3),
+               3px 3px 8px rgba(0, 0, 0, 0.9);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Featured Transformation Card */
+.featured-card {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8), rgba(20, 24, 41, 0.6));
+  border: 2px solid var(--cosmic-yellow);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3),
+              inset 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.featured-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+  animation: orbit 8s linear infinite;
+}
+
+@keyframes orbit {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.featured-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.5),
+              0 0 80px rgba(255, 215, 0, 0.25),
+              inset 0 0 30px rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 1);
+}
+
+/* Featured Project Link */
+.featured-link {
+  display: inline-block;
+  color: var(--cosmic-yellow);
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid var(--cosmic-yellow);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 215, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.featured-link:hover {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.featured-link:hover::before {
+  left: 0;
+}
+
+/* Warp Speed Lines */
+@keyframes warp {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.warp-line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cosmic-yellow), transparent);
+  animation: warp 2s infinite;
+}
+
+/* Cosmic Button */
+.cosmic-btn {
+  background: linear-gradient(135deg, var(--cosmic-yellow), rgba(255, 215, 0, 0.8));
+  color: var(--cosmic-navy);
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmic-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(26, 26, 46, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.cosmic-btn:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7),
+              0 0 60px rgba(255, 215, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.cosmic-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Testimonials to Featured Transformations */
+.featured-transformations {
+  background: linear-gradient(180deg, rgba(20, 24, 41, 0.8), rgba(26, 26, 46, 0.6));
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-transformations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.05) 50%, transparent 70%),
+    linear-gradient(-45deg, transparent 30%, rgba(255, 215, 0, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Cosmic Grid Background */
+.cosmic-grid {
+  position: relative;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, rgba(255, 215, 0, 0.05) 25%, rgba(255, 215, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 215, 0, 0.05) 75%, rgba(255, 215, 0, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 215, 0, 0.05) 25%, rgba(255, 215, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 215, 0, 0.05) 75%, rgba(255, 215, 0, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+}
+
+/* Hide Testimonial Avatars & Names */
+.testimonial-card .client-avatar,
+.testimonial-card .client-name {
+  display: none;
+}
+
+/* Featured Transformation Title */
+.transformation-title {
+  font-size: 1.5rem;
+  color: var(--cosmic-yellow);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Mobile Responsive Space Theme */
+@media (max-width: 768px) {
+  .featured-card {
+    padding: 1.5rem;
+  }
+  
+  .cosmic-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .featured-transformations {
+    padding: 2rem 1rem;
+  }
+}
 }
