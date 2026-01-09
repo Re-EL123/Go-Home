@@ -22,31 +22,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    function submitToWhatsApp(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const company = document.getElementById('company').value;
-      const service = document.getElementById('service').value;
-      const budget = document.getElementById('budget').value;
-      const message = document.getElementById('message').value;
-      
-      const whatsappMessage = `Hello Re-EL! I'm interested in your services.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nService Type: ${service}\nBudget: ${budget}\nMessage: ${message}`;
-      
-      const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappURL = `https://wa.me/27813864024?text=${encodedMessage}`;
-      
-      window.open(whatsappURL, '_blank');
-    }
-  </script>
+  <style>
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-yellow); }
+  </style>
 </head>
 <body>
-  <!-- Navigation Header -->
   <header>
     <div class="header-container">
       <div class="logo">
@@ -64,52 +47,40 @@
   </header>
 
   <main style="padding-top: 80px;">
-    <!-- Hero Section -->
-    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center;">
+    <section class="section" style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center;">Let's Work Together</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Whether you have questions about our services or want to discuss your project, we're here to help and ready to bring your vision to life.</p>
+        <h1 style="margin-bottom: 1.5rem; text-align: center; color: white;">Let's Work Together</h1>
+        <p style="text-align: center; font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 0;">Whether you have questions about our services or want to discuss your project, we're here to help and ready to bring your vision to life.</p>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section section-light">
       <div class="container">
         <div style="max-width: 900px; margin: 0 auto;">
           <h2 style="text-align: center; margin-bottom: 3rem;">Service Enquiry Form</h2>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-            <!-- Contact Form -->
             <div class="card">
               <h3 style="margin-bottom: 2rem;">Tell us about your project</h3>
-              <form id="enquiryForm" onsubmit="submitToWhatsApp(event)">
-                <!-- Name -->
+              <form id="contactForm">
                 <div class="form-group">
-                  <label>Your Full Name *</label>
-                  <input type="text" id="name" name="name" required placeholder="John Doe" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="name">Your Full Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="John Doe">
                 </div>
-
-                <!-- Email -->
                 <div class="form-group">
-                  <label>Email Address *</label>
-                  <input type="email" id="email" name="email" required placeholder="john@company.com" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required placeholder="john@company.com">
                 </div>
-
-                <!-- Phone -->
                 <div class="form-group">
-                  <label>Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="+27813864024" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+27813864024">
                 </div>
-
-                <!-- Company -->
                 <div class="form-group">
-                  <label>Company Name</label>
-                  <input type="text" id="company" name="company" placeholder="Your Company" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="company">Company Name</label>
+                  <input type="text" id="company" name="company" placeholder="Your Company">
                 </div>
-
-                <!-- Service Type -->
                 <div class="form-group">
-                  <label>Service Type *</label>
-                  <select id="service" name="service" required style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="service">Service Type *</label>
+                  <select id="service" name="service" required>
                     <option value="">Select a service...</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Mobile App Development">Mobile App Development</option>
@@ -119,11 +90,9 @@
                     <option value="Other">Other</option>
                   </select>
                 </div>
-
-                <!-- Budget -->
                 <div class="form-group">
-                  <label>Budget Range</label>
-                  <select id="budget" name="budget" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit;">
+                  <label for="budget">Budget Range</label>
+                  <select id="budget" name="budget">
                     <option value="">Select a range...</option>
                     <option value="R5,000 - R15,000">R5,000 - R15,000</option>
                     <option value="R15,000 - R50,000">R15,000 - R50,000</option>
@@ -131,26 +100,20 @@
                     <option value="R100,000+">R100,000+</option>
                   </select>
                 </div>
-
-                <!-- Message -->
                 <div class="form-group">
-                  <label>Project Details *</label>
-                  <textarea id="message" name="message" required placeholder="Tell us more about your project..." style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-family: inherit; min-height: 120px; resize: vertical;"></textarea>
+                  <label for="message">Project Details *</label>
+                  <textarea id="message" name="message" required placeholder="Tell us more about your project..." style="min-height: 120px; resize: vertical;"></textarea>
                 </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Send via WhatsApp</button>
+                <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()" style="width: 100%; cursor: pointer;">Send via WhatsApp</button>
               </form>
             </div>
-
-            <!-- Contact Information -->
             <div>
               <h3 style="margin-bottom: 2rem;">Other Ways to Connect</h3>
               <div class="card" style="margin-bottom: 1.5rem;">
                 <h4 style="margin-bottom: 1rem; color: var(--primary-yellow);">WhatsApp</h4>
                 <p style="margin-bottom: 1rem;">Chat with us directly on WhatsApp for quick responses.</p>
-                <a href="https://wa.me/27813864024" target="_blank" class="btn btn-secondary" style="display: inline-block;">Message on WhatsApp</a>
+                <a href="https://wa.me/27813864024" target="_blank" class="btn btn-primary" style="display: inline-block;">Message on WhatsApp</a>
               </div>
-
               <div class="card">
                 <h4 style="margin-bottom: 1rem; color: var(--primary-yellow);">Quick Response Time</h4>
                 <p style="margin-bottom: 0.5rem;">We typically respond within 24 hours</p>
@@ -163,7 +126,6 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
         <h2 style="color: var(--text-light); margin-bottom: 2rem;">Still Deciding?</h2>
@@ -176,7 +138,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container" style="text-align: center;">
       <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Re<span style="color: var(--primary-yellow);">-</span>EL</div>
@@ -193,11 +154,23 @@
   </footer>
 
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 100
-    });
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const service = document.getElementById('service').value;
+      const budget = document.getElementById('budget').value;
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !service || !message) {
+        alert('Please fill in all required fields');
+        return;
+      }
+      const text = `Hello Re-EL! I'm interested in your services.\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nCompany: ${company || 'Not provided'}\nService Type: ${service}\nBudget: ${budget || 'Not specified'}\nProject Details: ${message}`;
+      const url = `https://wa.me/27813864024?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+    AOS.init({ duration: 1000, once: true, offset: 100 });
   </script>
 </body>
 </html>
