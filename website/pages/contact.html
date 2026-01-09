@@ -22,11 +22,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"><"/>/script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <style>
     .form-group { margin-bottom: 1.5rem; }
     .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
     .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-yellow); }
+    .form-group input.error, .form-group select.error, .form-group textarea.error { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.05); }
   </style>
 </head>
 <body>
@@ -37,8 +41,8 @@
         <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
       </div>
       <nav>
-        <a href="homepage.html">Home</a>
-        <a href="homepage.html#services">Services</a>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="cta-button">Contact</a>
@@ -47,6 +51,7 @@
   </header>
 
   <main style="padding-top: 80px;">
+    <!-- Hero Section -->
     <section class="section" style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
         <h1 style="margin-bottom: 1.5rem; text-align: center; color: white;">Let's Work Together</h1>
@@ -54,90 +59,102 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="section section-light">
       <div class="container">
         <div style="max-width: 900px; margin: 0 auto;">
           <h2 style="text-align: center; margin-bottom: 3rem;">Service Enquiry Form</h2>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-            <div class="card">
-              <h3 style="margin-bottom: 2rem;">Tell us about your project</h3>
-              <form id="contactForm">
-                <div class="form-group">
-                  <label for="name">Your Full Name *</label>
-                  <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address *</label>
-                  <input type="email" id="email" name="email" required placeholder="john@company.com">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="+27813864024">
-                </div>
-                <div class="form-group">
-                  <label for="company">Company Name</label>
-                  <input type="text" id="company" name="company" placeholder="Your Company">
-                </div>
-                <div class="form-group">
-                  <label for="service">Service Type *</label>
-                  <select id="service" name="service" required>
-                    <option value="">Select a service...</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="Branding & Design">Branding & Design</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="E-commerce Solutions">E-commerce Solutions</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="budget">Budget Range</label>
-                  <select id="budget" name="budget">
-                    <option value="">Select a range...</option>
-                    <option value="R5,000 - R15,000">R5,000 - R15,000</option>
-                    <option value="R15,000 - R50,000">R15,000 - R50,000</option>
-                    <option value="R50,000 - R100,000">R50,000 - R100,000</option>
-                    <option value="R100,000+">R100,000+</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="message">Project Details *</label>
-                  <textarea id="message" name="message" required placeholder="Tell us more about your project..." style="min-height: 120px; resize: vertical;"></textarea>
-                </div>
-                <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()" style="width: 100%; cursor: pointer;">Send via WhatsApp</button>
-              </form>
-            </div>
-            <div>
-              <h3 style="margin-bottom: 2rem;">Other Ways to Connect</h3>
-              <div class="card" style="margin-bottom: 1.5rem;">
-                <h4 style="margin-bottom: 1rem; color: var(--primary-yellow);">WhatsApp</h4>
-                <p style="margin-bottom: 1rem;">Chat with us directly on WhatsApp for quick responses.</p>
-                <a href="https://wa.me/27813864024" target="_blank" class="btn btn-primary" style="display: inline-block;">Message on WhatsApp</a>
+          
+          <div class="card">
+            <h3 style="margin-bottom: 2rem;">Tell us about your project</h3>
+            
+            <form id="contactForm" onsubmit="return false;">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">Your Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
               </div>
-              <div class="card">
-                <h4 style="margin-bottom: 1rem; color: var(--primary-yellow);">Quick Response Time</h4>
-                <p style="margin-bottom: 0.5rem;">We typically respond within 24 hours</p>
-                <p style="margin-bottom: 0.5rem;">📍 Based in Johannesburg, South Africa</p>
-                <p style="margin: 0; color: var(--primary-yellow); font-weight: 600;">+27 81 386 4024</p>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="john@company.com">
               </div>
-            </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+27813864024">
+              </div>
+
+              <!-- Company -->
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Your Company">
+              </div>
+
+              <!-- Service Type -->
+              <div class="form-group">
+                <label for="service">Service Type *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service...</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile App Development">Mobile App Development</option>
+                  <option value="Branding & Design">Branding & Design</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="E-commerce Solutions">E-commerce Solutions</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Budget -->
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range...</option>
+                  <option value="R5,000 - R15,000">R5,000 - R15,000</option>
+                  <option value="R15,000 - R50,000">R15,000 - R50,000</option>
+                  <option value="R50,000 - R100,000">R50,000 - R100,000</option>
+                  <option value="R100,000+">R100,000+</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Project Details *</label>
+                <textarea id="message" name="message" required placeholder="Tell us more about your project..." style="min-height: 120px; resize: vertical;"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem; cursor: pointer;">Send via WhatsApp</button>
+            </form>
+          </div>
+
+          <div style="margin-top: 2rem; padding: 2rem; background: rgba(255, 193, 7, 0.1); border-radius: 8px; text-align: center;">
+            <h3 style="margin-bottom: 1rem;">Other Ways to Connect</h3>
+            <p style="margin-bottom: 1rem;">Chat with us directly on WhatsApp for quick responses.</p>
+            <a href="https://wa.me/27813864024" target="_blank" class="btn btn-primary">Message on WhatsApp</a>
+            <p style="margin-top: 2rem; color: #666;">📍 Based in Johannesburg, South Africa</p>
+            <p style="color: #666;">+27 81 386 4024</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Still Deciding Section -->
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
         <h2 style="color: var(--text-light); margin-bottom: 2rem;">Still Deciding?</h2>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Check out our portfolio of successful projects or learn more about our services.</p>
         <div class="hero-buttons" style="justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.href='portfolio.html'">View Our Work</button>
-          <button class="btn btn-secondary" style="color: var(--text-light); border-color: var(--text-light);" onclick="window.location.href='services.html'">Explore Services</button>
+          <button class="btn btn-secondary" style="color: var(--text-light); border-color: var(--text-light);" onclick="window.location.href='../index.html#services'">Explore Services</button>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container" style="text-align: center;">
       <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Re<span style="color: var(--primary-yellow);">-</span>EL</div>
@@ -145,7 +162,7 @@
       <p style="margin-bottom: 2rem; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">© 2026 Re-EL. All rights reserved. | Johannesburg, South Africa</p>
       <nav style="gap: 2rem; justify-content: center; margin-bottom: 2rem;">
         <a href="about.html" style="color: var(--primary-yellow); font-size: 0.9rem;">About</a>
-        <a href="homepage.html#services" style="color: var(--primary-yellow); font-size: 0.9rem;">Services</a>
+        <a href="../index.html#services" style="color: var(--primary-yellow); font-size: 0.9rem;">Services</a>
         <a href="portfolio.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Portfolio</a>
         <a href="contact.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Contact</a>
         <a href="https://wa.me/27813864024" target="_blank" style="color: var(--primary-yellow); font-size: 0.9rem;">WhatsApp</a>
@@ -153,8 +170,22 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
   <script>
-    function sendToWhatsApp() {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = this;
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
@@ -162,15 +193,30 @@
       const service = document.getElementById('service').value;
       const budget = document.getElementById('budget').value;
       const message = document.getElementById('message').value.trim();
+
+      // Validate required fields
       if (!name || !email || !service || !message) {
-        alert('Please fill in all required fields');
-        return;
+        window.showErrorMessage('Please fill in all required fields');
+        return false;
       }
-      const text = `Hello Re-EL! I'm interested in your services.\nName: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nCompany: ${company || 'Not provided'}\nService Type: ${service}\nBudget: ${budget || 'Not specified'}\nProject Details: ${message}`;
-      const url = `https://wa.me/27813864024?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
-    }
-    AOS.init({ duration: 1000, once: true, offset: 100 });
+
+      // Validate email
+      if (!ReELUtils.isValidEmail(email)) {
+        window.showErrorMessage('Please enter a valid email address');
+        return false;
+      }
+
+      // Build WhatsApp message
+      const whatsappMessage = `Service Enquiry from Re-EL Website:%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone || 'Not provided')}%0ACompany: ${encodeURIComponent(company || 'Not provided')}%0AService Type: ${encodeURIComponent(service)}%0ABudget: ${encodeURIComponent(budget || 'Not specified')}%0AProject Details: ${encodeURIComponent(message)}`;
+
+      // Open WhatsApp
+      const whatsappUrl = `https://wa.me/27813864024?text=${whatsappMessage}`;
+      window.showSuccessMessage('Opening WhatsApp...');
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        form.reset();
+      }, 500);
+    });
   </script>
 </body>
 </html>
