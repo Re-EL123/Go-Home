@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Re-EL | Digital Branding Agency | Tech Talent Recruitment Solutions</title>
-    <meta name="description" content="Re-EL - Deep tech talent intelligence platform. We help companies scale their engineering teams with precision. HQHR-style talent placement solutions.">
+    <title>Creative Agency | Branding, Design & Software Development - Johannesburg</title>
+    <meta name="description" content="Award-winning creative agency in Johannesburg. We specialize in branding, graphic design, and software development. Transform your business today.">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </head>
 <body>
     <!-- Navigation Header -->
     <header>
         <div class="header-container">
-            <div class="logo">Re<span>-</span>EL</div>
+            <div class="logo">Brand<span>.</span>Studio</div>
             <nav>
-                <a href="#solutions">Solutions</a>
-                <a href="#sectors">Sectors</a>
                 <a href="#services">Services</a>
-                <a href="#process">Process</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
                 <a href="contact.html" class="cta-button">Get Started</a>
             </nav>
         </div>
@@ -29,24 +32,24 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>We help companies scale their tech teams</h1>
-                <p>Partner with us for fewer interviews and stronger hires. Our focus is on roles where technical depth creates competitive advantage. Every placement aligns with your roadmap so the team you hire today drives the metrics that matter next quarter.</p>
+                <h1>Transform Your Business Into A Brand</h1>
+                <p>We're a creative powerhouse in Johannesburg specializing in branding, graphic design, and custom software solutions. Let's build something extraordinary that sets your business apart in the digital world.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Deploy Team</button>
-                    <button class="btn btn-secondary">Join Network</button>
+                    <button class="btn btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Explore Services</button>
+                    <button class="btn btn-secondary" onclick="window.open('https://wa.me/27813864024?text=Hi%20Brand.Studio!%20I%20want%20to%20discuss%20my%20project', '_blank')">Chat on WhatsApp</button>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">92%</div>
-                        <div class="stat-label">Placement Success</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">14</div>
-                        <div class="stat-label">Days to Shortlist</div>
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Projects Delivered</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">98%</div>
-                        <div class="stat-label">1-Year Retention</div>
+                        <div class="stat-label">Client Happiness</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">Years Creative</div>
                     </div>
                 </div>
             </div>
@@ -54,166 +57,68 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section section--secondary" id="solutions">
+    <section class="section section-gradient" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Process - 5 Stages. Zero Guesswork.</h2>
-                <p>From intake to onboarding, we handle every stage with precision assessment and real-time visibility.</p>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h3>Intake</h3>
-                    <p>Deep conversation about your role, tech stack, and what success looks like</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h3>Source</h3>
-                    <p>Tap our network of 50,000+ technical professionals</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h3>Assess</h3>
-                    <p>Technical & cultural assessment through CORE framework</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h3>Present</h3>
-                    <p>Live SYNC portal with validated candidates & assessments</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <h3>Onboard</h3>
-                    <p>Support through 90 days with market intelligence & assurance</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Specialized Talent Pools</h2>
-                <p>Deep expertise across critical tech infrastructure sectors</p>
+                <h2>Our Creative Services</h2>
+                <p>We deliver end-to-end solutions to elevate your brand and business</p>
             </div>
             <div class="grid grid--cols-3">
                 <div class="card">
-                    <div class="card-icon">🤖</div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Foundation models & AI platforms. ML Platform Engineers, MLOps Engineers, AI Infrastructure Engineers.</p>
+                    <div class="card-icon">🎨</div>
+                    <h3>Branding & Design</h3>
+                    <p>Logo design, brand identity, visual design systems, and rebranding strategies that capture your essence and speak to your audience.</p>
+                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--primary-yellow); font-weight: 600;">Learn More →</a>
                 </div>
                 <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3>Cloud & Infrastructure</h3>
-                    <p>Platform engineering & cloud-native systems. Platform Engineers, Infrastructure Engineers, SRE, DevOps.</p>
+                    <div class="card-icon">💻</div>
+                    <h3>Software Development</h3>
+                    <p>Custom web apps, mobile applications, e-commerce solutions, and innovative software tailored to your unique business needs.</p>
+                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--primary-yellow); font-weight: 600;">Learn More →</a>
                 </div>
                 <div class="card">
-                    <div class="card-icon">🔒</div>
-                    <h3>Cybersecurity</h3>
-                    <p>Security infrastructure & compliance. Security Engineers, Platform Security Engineers, Architects.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section section--secondary" id="sectors">
-        <div class="container">
-            <div class="section-header">
-                <h2>What People Say</h2>
-                <p>Leading tech companies trust us to build world-class teams with precision and speed</p>
-            </div>
-            <div class="grid grid--cols-3">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"Re-EL found us a VP of Engineering who aligned perfectly with our hybrid vision. Time to hire was under 3 weeks—unheard of for this level."</div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SC</div>
-                        <div class="author-info">
-                            <h4>Sarah Chen</h4>
-                            <p class="author-title">CTO at Nebula AI</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"The cultural fit assessment is scary accurate. Our retention rate for technical leads has never been higher since we switched to Re-EL."</div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MT</div>
-                        <div class="author-info">
-                            <h4>Marcus Thorne</h4>
-                            <p class="author-title">Head of Talent, Quantex</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"Deep tech roles are notoriously hard to fill. Re-EL delivered a shortlist of 3 perfect candidates in days, not months."</div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">ER</div>
-                        <div class="author-info">
-                            <h4>Elena Rodriguez</h4>
-                            <p class="author-title">Founder, EcoSynthetics</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Plans Section -->
-    <section class="section" id="process">
-        <div class="container">
-            <div class="section-header">
-                <h2>Flexible Plans. Tailored Solutions.</h2>
-                <p>Choose the service model that fits your hiring needs and timeline</p>
-            </div>
-            <div class="grid grid--cols-3">
-                <div class="card">
-                    <h3>Contingent Search</h3>
-                    <p style="color: var(--text-tertiary); margin-bottom: 1rem; font-size: 0.9rem;">3 MONTH GUARANTEE</p>
-                    <p>Secure the best talent effortlessly with our flexible contingent search solutions, filling critical positions 25% faster than industry average.</p>
-                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--accent-blue);">Learn More →</a>
-                </div>
-                <div class="card">
-                    <h3>Retained Search</h3>
-                    <p style="color: var(--text-tertiary); margin-bottom: 1rem; font-size: 0.9rem;">6-12 MONTH GUARANTEE • POPULAR CHOICE</p>
-                    <p>Achieve your hiring goals confidently with our retained search service. Over 96% of placed candidates thrive after 1 year.</p>
-                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--accent-blue);">Learn More →</a>
-                </div>
-                <div class="card">
-                    <h3>Executive Search</h3>
-                    <p style="color: var(--text-tertiary); margin-bottom: 1rem; font-size: 0.9rem;">12 MONTH GUARANTEE</p>
-                    <p>Discover transformational leaders who will drive your organization's success. 90%+ alignment rate with our assessment methodology.</p>
-                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--accent-blue);">Learn More →</a>
+                    <div class="card-icon">📱</div>
+                    <h3>Digital Marketing</h3>
+                    <p>Social media strategy, content creation, SEO optimization, and digital campaigns that drive growth and engagement.</p>
+                    <a href="contact.html" style="display: inline-block; margin-top: 1rem; color: var(--primary-yellow); font-weight: 600;">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section section--secondary" style="text-align: center;">
-        <div class="container">
-            <h2 style="margin-bottom: 2rem;">Ready to Build Your Technical Edge?</h2>
+    <section class="section section-navy">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: var(--text-light); margin-bottom: 2rem;">Ready to Take Your Business to the Next Level?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Let's discuss your project and explore how we can help transform your vision into reality.</p>
             <div class="hero-buttons" style="justify-content: center;">
-                <button class="btn btn-primary">Deploy Team</button>
-                <button class="btn btn-secondary">Join Network</button>
+                <button class="btn btn-primary" onclick="window.open('https://wa.me/27813864024?text=Hi%20Brand.Studio!%20I%20want%20to%20discuss%20my%20project', '_blank')">Start on WhatsApp</button>
+                <button class="btn btn-secondary" style="color: var(--text-light); border-color: var(--text-light);" onclick="window.location.href='contact.html'">Book a Consultation</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="background: var(--bg-primary); border-top: 1px solid var(--border-light); padding: 4rem 0; margin-top: 4rem;">
+    <footer>
         <div class="container" style="text-align: center;">
-            <div class="logo" style="margin-bottom: 2rem;">Re<span>-</span>EL</div>
-            <p style="margin-bottom: 1rem; color: var(--text-tertiary);">Deep Tech Talent Intelligence</p>
-            <p style="margin-bottom: 2rem; color: var(--text-tertiary); font-size: 0.9rem;">© 2025 Re-EL. All rights reserved. | Building exceptional engineering teams.</p>
+            <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Brand<span style="color: var(--primary-yellow);">.</span>Studio</div>
+            <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">Transforming Businesses Through Creative Excellence</p>
+            <p style="margin-bottom: 2rem; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">© 2026 Brand.Studio. All rights reserved. | Johannesburg, South Africa</p>
             <nav style="gap: 2rem; justify-content: center; margin-bottom: 2rem;">
-                <a href="about.html" style="color: var(--text-secondary); font-size: 0.9rem;">About</a>
-                <a href="portfolio.html" style="color: var(--text-secondary); font-size: 0.9rem;">Portfolio</a>
-                <a href="contact.html" style="color: var(--text-secondary); font-size: 0.9rem;">Contact</a>
+                <a href="about.html" style="color: var(--primary-yellow); font-size: 0.9rem;">About</a>
+                <a href="#services" style="color: var(--primary-yellow); font-size: 0.9rem;">Services</a>
+                <a href="contact.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Contact</a>
+                <a href="https://wa.me/27813864024" target="_blank" style="color: var(--primary-yellow); font-size: 0.9rem;">WhatsApp</a>
             </nav>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 </html>
