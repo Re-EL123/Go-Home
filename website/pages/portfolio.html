@@ -4,17 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Re-EL | Showcase of Web & App Development Projects</title>
-  <meta name="description" content="Explore Re-EL's portfolio of successful web development, app design, and branding projects for diverse South African businesses and startups.">
-  <meta name="keywords" content="portfolio, case studies, web projects, app development projects, design portfolio, creative work">
-  <meta name="author" content="Re-EL Digital Agency">
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Portfolio - Re-EL Digital Agency" />
-  <meta property="og:description" content="See our successful digital projects and case studies." />
-  <meta property="og:url" content="https://re-el-branding.rf.gd/pages/portfolio.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Re-EL Portfolio - Digital Projects" />
-  <meta name="twitter:description" content="Explore our latest web development and design projects." />
-  <link rel="canonical" href="https://re-el-branding.rf.gd/pages/portfolio.html" />
+  <meta name="description" content="Explore Re-EL's portfolio of successful web development, app design, and branding projects.">
   <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +24,7 @@
         <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
       </div>
       <nav>
-        >Home</a>
+        <a href="homepage.html">Home</a>
         <a href="homepage.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
@@ -44,57 +34,83 @@
   </header>
 
   <main style="padding-top: 80px;">
-    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center;"; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;>
+    <!-- Hero Section -->
+    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/bg-hero.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center;">Our Portfolio</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Discover our latest and greatest projects showcasing digital excellence</p>
+        <h1 style="margin-bottom: 1.5rem; text-align: center; color: var(--primary-yellow);">Our Portfolio</h1>
+        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Discover our latest projects showcasing digital excellence and creative innovation</p>
       </div>
     </section>
 
+    <!-- Portfolio Section with Real Projects -->
     <section class="section section-light">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">E-Commerce Platform</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+          
+          <!-- PakBet Project -->
+          <div class="card" style="overflow: hidden;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); display: flex; align-items: center; justify-content: center; color: var(--primary-yellow); font-size: 2rem; font-weight: bold;">PakBet</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">PakBet - Online Betting Platform</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
-            <p>Modern e-commerce solution with integrated payment systems, inventory management, and responsive design for seamless shopping experience.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, Node.js, MongoDB, Stripe</p>
+            <p>An innovative online betting application with multiple sports categories including Soccer, Cricket, Aviator, and Casino. Built with modern web technologies for seamless user experience.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: HTML5, JavaScript, Firebase, Responsive Design</p>
+            <a href="https://www.pakbet.online" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
           </div>
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">Mobile Banking App</h3>
-            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">App Development</p>
-            <p>Secure mobile banking application with real-time transactions, account management, and enhanced security features for financial services.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React Native, Firebase, Swift</p>
+
+          <!-- Street Connect Project -->
+          <div class="card" style="overflow: hidden;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #5b6ef5 0%, #4c63d2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; text-align: center; padding: 1rem;">Street Connect</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Street Connect - Community Platform</h3>
+            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
+            <p>Connect with local vendors, discover services, share posts, and grow your business all in one place. A vibrant community platform for South African entrepreneurs and service providers.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, Node.js, MongoDB, Real-time Features</p>
+            <a href="https://www.streetconnect-mzansi.co.za" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
           </div>
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">Brand Identity System</h3>
+
+          <!-- Re-Player Music App -->
+          <div class="card" style="overflow: hidden;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; text-align: center; padding: 1rem;">Re-Player</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Re-Player - Music Application</h3>
+            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
+            <p>A PWM-based music player with HQ equalizer presets and advanced audio processing. Experience high-quality music streaming with intuitive controls and professional audio enhancement.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, JavaScript, Web Audio API, Modern UI</p>
+            <a href="https://re-player.vercel.app" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+          </div>
+
+          <!-- Interactive Portal -->
+          <div class="card" style="overflow: hidden;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">The Portal</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Interactive Versatile Portal</h3>
+            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
+            <p>This advanced portfolio showcasing tools and stacks with attractive effects and interactive elements. A demonstration of cutting-edge web technologies and user experience design principles.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: Next.js, TypeScript, Tailwind CSS, Interactive Animations</p>
+            <a href="https://re-el123.github.io/The-Portal/" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+          </div>
+
+          <!-- Branding Project Template -->
+          <div class="card" style="overflow: hidden;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">Brand Identity</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Brand Identity & Logo Design</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Branding & Design</p>
-            <p>Complete brand identity including logo design, color palette, typography guidelines, and marketing collateral for startup success.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Deliverables: Logo, Guidelines, Assets, Marketing Materials</p>
+            <p>Complete brand identity systems including logo design, color palettes, typography guidelines, and comprehensive marketing collateral for businesses of all sizes.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Deliverables: Logo, Guidelines, Brand Assets, Marketing Materials</p>
           </div>
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">SaaS Dashboard</h3>
+
+          <!-- E-wallet Project (Coming Soon) -->
+          <div class="card" style="overflow: hidden; opacity: 0.8;">
+            <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">E-Wallet</div>
+            <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Re-ZA E-Wallet Platform</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
-            <p>Analytics dashboard with real-time data visualization, user management, and customizable reports for business intelligence.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: Vue.js, Django, PostgreSQL, Chart.js</p>
+            <p>Secure digital wallet platform for South African users with seamless payment integration, transaction history, and user-friendly financial management tools.</p>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, Node.js, Secure Payments, Real-time Updates</p>
           </div>
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">Social Media Campaign</h3>
-            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Digital Marketing</p>
-            <p>Strategic social media marketing campaign resulting in 300% engagement increase and 150+ qualified leads for client business.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Strategy: Content, Ads, Analytics, Community Management</p>
-          </div>
-          <div class="card">
-            <h3 style="margin-bottom: 0.5rem;">Corporate Website</h3>
-            <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
-            <p>Enterprise website with CMS integration, multi-language support, SEO optimization, and high conversion rate optimization.</p>
-            <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: Next.js, Sanity CMS, Tailwind CSS</p>
-          </div>
+
         </div>
       </div>
     </section>
 
+    <!-- CTA Section -->
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
         <h2 style="color: var(--text-light); margin-bottom: 2rem;">Ready to Start Your Next Project?</h2>
@@ -107,6 +123,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container" style="text-align: center;">
       <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Re<span style="color: var(--primary-yellow);">-</span>EL</div>
@@ -125,7 +142,7 @@
   <script>
     AOS.init({duration: 1000, once: true, offset: 100});
   </script>
-   <script src="../js/utils.js"></script>
- <script src="../js/main.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
