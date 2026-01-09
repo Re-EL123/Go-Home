@@ -1,36 +1,44 @@
 /* ============================================
-   HQHR-INSPIRED DESIGN SYSTEM
-   Dark Modern Tech Company Theme
-   ============================================ */
+CREATIVE AGENCY DESIGN SYSTEM
+Yellow & Navy Blue Modern Theme with Glassmorphism
+============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+@import url('https://unpkg.com/aos@next/dist/aos.css');
+@import url('https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css');
 
-/* CSS VARIABLES - Color Palette */
 :root {
-  /* Dark Theme Background */
-  --bg-primary: #0F1428;
-  --bg-secondary: #1A1F35;
-  --bg-tertiary: #242B48;
+  /* Primary Colors */
+  --primary-yellow: #FFD700;
+  --primary-navy: #001F3F;
+  --navy-light: #003366;
+  --navy-dark: #000A1F;
+  
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-glass: rgba(255, 255, 255, 0.7);
+  --bg-navy-glass: rgba(0, 31, 63, 0.8);
   
   /* Accent Colors */
-  --accent-blue: #00D4FF;
-  --accent-cyan: #0099FF;
-  --accent-gold: #FFD700;
-  --accent-orange: #FFA500;
+  --accent-yellow-light: #FFE94D;
+  --accent-blue: #0066CC;
+  --accent-success: #10B981;
   
   /* Text Colors */
-  --text-primary: #FFFFFF;
-  --text-secondary: #A0AEC0;
-  --text-tertiary: #718096;
+  --text-primary: #001F3F;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-light: #FFFFFF;
   
-  /* Borders */
-  --border-light: rgba(255, 255, 255, 0.1);
-  --border-medium: rgba(255, 255, 255, 0.2);
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+  /* Borders & Shadows */
+  --border-light: rgba(0, 31, 63, 0.1);
+  --border-medium: rgba(0, 31, 63, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 31, 63, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 31, 63, 0.12);
+  --shadow-lg: 0 16px 40px rgba(0, 31, 63, 0.15);
+  --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.2);
   
   /* Typography */
   --font-sans: 'Inter', sans-serif;
@@ -38,8 +46,8 @@
 }
 
 /* ============================================
-   GLOBAL STYLES
-   ============================================ */
+GLOBAL STYLES
+============================================ */
 
 * {
   margin: 0;
@@ -60,70 +68,76 @@ body {
 }
 
 /* ============================================
-   TYPOGRAPHY
-   ============================================ */
+TYPOGRAPHY
+============================================ */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--text-primary);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  color: var(--text-primary);
+  font-size: clamp(1.8rem, 4vw, 3rem);
 }
 
 h3 {
   font-size: 1.5rem;
-  color: var(--text-primary);
 }
 
 p {
   font-size: 1rem;
   color: var(--text-secondary);
   margin-bottom: 1rem;
-  max-width: 65ch;
 }
 
 a {
-  color: var(--accent-blue);
+  color: var(--primary-navy);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--accent-cyan);
+  color: var(--primary-yellow);
 }
 
 /* ============================================
-   LAYOUT UTILITIES
-   ============================================ */
+LAYOUT & CONTAINERS
+============================================ */
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 6rem 0;
   position: relative;
   overflow: hidden;
 }
 
-.section--dark {
-  background-color: var(--bg-primary);
+.section-light {
+  background: var(--bg-primary);
 }
 
-.section--secondary {
-  background-color: var(--bg-secondary);
+.section-gradient {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.section-navy {
+  background: var(--primary-navy);
+  color: var(--text-light);
 }
 
 .grid {
@@ -136,16 +150,16 @@ a:hover {
 }
 
 .grid--cols-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .grid--cols-4 {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 /* ============================================
-   HEADER & NAVIGATION
-   ============================================ */
+HEADER & NAVIGATION
+============================================ */
 
 header {
   position: fixed;
@@ -153,16 +167,17 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 20, 40, 0.8);
-  backdrop-filter: blur(10px);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
   padding: 1rem 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .header-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,52 +185,77 @@ header {
 
 .logo {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--primary-navy);
   letter-spacing: -0.5px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--primary-yellow);
+  transform: scale(1.05);
 }
 
 .logo span {
-  color: var(--accent-blue);
+  color: var(--primary-yellow);
 }
 
 nav {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
 nav a {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--accent-blue);
+  color: var(--primary-navy);
+  font-weight: 600;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-yellow), var(--primary-navy));
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .cta-button {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  color: var(--bg-primary);
+  background: linear-gradient(135deg, var(--primary-yellow), #FFE94D);
+  color: var(--primary-navy);
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 50px;
+  font-weight: 700;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
+  box-shadow: var(--shadow-md);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 /* ============================================
-   HERO SECTION
-   ============================================ */
+HERO SECTION
+============================================ */
 
 .hero {
   margin-top: 80px;
@@ -231,43 +271,71 @@ nav a.active {
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 31, 63, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(30px); }
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: 700px;
+  animation: slideInLeft 1s ease-out;
 }
 
 .hero h1 {
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+  animation: slideInLeft 1s ease-out 0.2s both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  animation: slideInLeft 1s ease-out 0.4s both;
 }
 
 .btn {
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;
   border: none;
@@ -276,66 +344,37 @@ nav a.active {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  color: var(--bg-primary);
+  background: linear-gradient(135deg, var(--primary-yellow), #FFE94D);
+  color: var(--primary-navy);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0, 212, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--text-primary);
-  border: 2px solid var(--border-medium);
+  color: var(--primary-navy);
+  border: 2px solid var(--primary-navy);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent-blue);
-  background: rgba(0, 212, 255, 0.1);
+  background: var(--primary-navy);
+  color: var(--text-light);
+  transform: translateY(-3px);
 }
 
 /* ============================================
-   HERO STATS
-   ============================================ */
-
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.stat {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--accent-blue);
-  margin-bottom: 0.5rem;
-  font-family: var(--font-display);
-}
-
-.stat-label {
-  font-size: 0.85rem;
-  color: var(--text-tertiary);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ============================================
-   CARDS
-   ============================================ */
+CARDS & GLASSMORPHISM
+============================================ */
 
 .card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
   padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
@@ -349,15 +388,15 @@ nav a.active {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .card:hover {
-  border-color: var(--accent-blue);
-  box-shadow: 0 12px 32px rgba(0, 212, 255, 0.2);
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-yellow);
 }
 
 .card:hover::before {
@@ -370,33 +409,85 @@ nav a.active {
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-yellow), #FFE94D);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .card h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .card p {
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
   margin-bottom: 0;
 }
 
 /* ============================================
-   SERVICES SECTION
-   ============================================ */
+HERO STATS
+============================================ */
 
-.services {
-  padding: 6rem 0;
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--border-light);
 }
+
+.stat {
+  text-align: center;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.stat:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-navy), var(--primary-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ============================================
+SECTION HEADERS
+============================================ */
 
 .section-header {
   text-align: center;
@@ -412,81 +503,68 @@ nav a.active {
 
 .section-header p {
   font-size: 1.1rem;
-}
-
-.services-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  color: var(--text-secondary);
 }
 
 /* ============================================
-   PROCESS SECTION
-   ============================================ */
+FORM STYLES
+============================================ */
 
-.process {
-  padding: 6rem 0;
-  background: var(--bg-secondary);
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.process-step {
-  position: relative;
-  padding: 2rem;
-  text-align: center;
-}
-
-.step-number {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.5rem;
-  margin: 0 auto 1rem;
-  color: var(--bg-primary);
-}
-
-.process-step h3 {
+.form-group label {
+  display: block;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
-.process-step p {
-  color: var(--text-tertiary);
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 /* ============================================
-   TESTIMONIALS SECTION
-   ============================================ */
-
-.testimonials {
-  padding: 6rem 0;
-}
-
-.testimonials-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
+TESTIMONIALS
+============================================ */
 
 .testimonial-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
-  border-color: var(--accent-blue);
-  box-shadow: 0 12px 32px rgba(0, 212, 255, 0.2);
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-yellow);
 }
 
 .testimonial-quote {
@@ -507,12 +585,13 @@ nav a.active {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  background: linear-gradient(135deg, var(--primary-yellow), #FFE94D);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  color: var(--bg-primary);
+  color: var(--primary-navy);
+  flex-shrink: 0;
 }
 
 .author-info h4 {
@@ -523,10 +602,154 @@ nav a.active {
 .author-title {
   font-size: 0.85rem;
   color: var(--text-tertiary);
+  margin: 0;
 }
 
 /* ============================================
-   FORM STYLES
-   ============================================ */
+FOOTER
+============================================ */
 
-.
+footer {
+  background: var(--primary-navy);
+  color: var(--text-light);
+  padding: 4rem 0;
+  border-top: 3px solid var(--primary-yellow);
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer a {
+  color: var(--primary-yellow);
+}
+
+footer a:hover {
+  color: var(--accent-yellow-light);
+}
+
+/* ============================================
+RESPONSIVE DESIGN
+============================================ */
+
+@media (max-width: 768px) {
+  nav {
+    gap: 1rem;
+  }
+  
+  nav a {
+    font-size: 0.85rem;
+  }
+  
+  .hero {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .grid--cols-2,
+  .grid--cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+/* ============================================
+UTILITY CLASSES
+============================================ */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mt-4 { margin-top: 4rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mb-4 { margin-bottom: 4rem; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+
+/* ============================================
+ANIMATIONS & TRANSITIONS
+============================================ */
+
+.fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
