@@ -250,3 +250,30 @@ window.ReELUtils = {
   getUrlParams,
   trackEvent
 };
+
+// Global message functions for compatibility
+window.showErrorMessage = function(message) {
+  ReELUtils.showToast(message, 'error', 5000);
+};
+
+window.showSuccessMessage = function(message) {
+  ReELUtils.showToast(message, 'success', 5000);
+};
+
+window.showInfoMessage = function(message) {
+  ReELUtils.showToast(message, 'info', 5000);
+};
+
+// Initialize Toast animations
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes slideIn {
+    from { transform: translateX(400px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(400px); opacity: 0; }
+  }
+`;
+document.head.appendChild(style);
