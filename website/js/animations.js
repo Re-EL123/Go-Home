@@ -154,3 +154,63 @@
   console.log('Re-EL Enhanced Animations loaded successfully');
 
 })();
+
+
+/* CANVAS HERO ANIMATION */
+class CanvasHeroAnimation {
+  constructor(containerId) {
+    this.container = document.querySelector(containerId);
+    if (!this.container) return;
+    this.canvas = document.createElement('canvas');
+    this.canvas.id = 'canvas-hero';
+    this.container.appendChild(this.canvas);
+    this.ctx = this.canvas.getContext('2d');
+    this.particles = [];
+    this.resizeCanvas();
+    this.initParticles();
+    this.animate();
+    window.addEventListener('resize', () => this.resizeCanvas());
+  }
+  resizeCanvas() {
+    this.canvas.width = this.container.offsetWidth;
+    this.canvas.height = this.container.offsetHeight;
+  }
+  initParticles() {
+    for (let i = 0; i < 50; i++) {
+      this.particles.push({
+        x: Math.random() * this.canvas.width,
+        y: Math.random() * this.canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.5 + 0.2,
+        color: Math.random() > 0.5 ? '#FFD700' : '#0A84FF'
+      });
+    }
+  }
+  animate() {
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0) p.x = this.canvas.width;
+      if (p.x > this.canvas.width) p.x = 0;
+      if (p.y < 0) p.y = this.canvas.height;
+      if (p.y > this.canvas.height) p.y = 0;
+      this.ctx.fillStyle = p.color;
+      this.ctx.globalAlpha = p.opacity;
+      this.ctx.beginPath();
+      this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      this.ctx.fill();
+    });
+    this.ctx.globalAlpha = 1;
+    requestAnimationFrame(() => this.animate());
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('.hero');
+  if (hero && !document.getElementById('canvas-hero')) {
+    new CanvasHeroAnimation('.hero');
+  }
+});
