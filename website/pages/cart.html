@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Re-EL | Graphic Design Quotes</title>
+  <meta name="description" content="Review your Re-EL graphic design cart and request a quote via WhatsApp.">
+  <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../public/assets/images/logo-no-bg.png" alt="Re-EL" style="height: 40px; width: auto; display: inline;">
+        <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
+      </div>
+      <nav>
+        <a href="homepage.html">Home</a>
+        <a href="homepage.html#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="contact.html" class="cta-button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+    <section class="section section-gradient" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">Your Order</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Your Design Cart</h1>
+          <p class="reveal-item delay-2" style="color: white;">Review your selected graphic design items and send us a quote request on WhatsApp. Prices are in ZAR, excl. VAT.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container">
+        <div id="cart-root"><!-- rendered by store.js --></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Re<span style="color: var(--primary-yellow);">-</span>EL</div>
+      <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">Creative Excellence in Design, Development & Branding</p>
+      <p style="margin-bottom: 2rem; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">© 2026 Re-EL. All rights reserved. | Johannesburg, South Africa</p>
+      <nav style="gap: 2rem; justify-content: center; margin-bottom: 2rem;">
+        <a href="about.html" style="color: var(--primary-yellow); font-size: 0.9rem;">About</a>
+        <a href="homepage.html#services" style="color: var(--primary-yellow); font-size: 0.9rem;">Services</a>
+        <a href="portfolio.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Portfolio</a>
+        <a href="contact.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Contact</a>
+        <a href="https://wa.me/27813864024" target="_blank" style="color: var(--primary-yellow); font-size: 0.9rem;">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="music-toggle" aria-label="Toggle calming music">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <script>
+    (function () {
+      function fmt(n) { return 'R' + Number(n).toLocaleString('en-ZA'); }
+      function render() {
+        var root = document.getElementById('cart-root');
+        var items = window.ReELCart.items();
+        if (!items.length) {
+          root.innerHTML =
+            '<div class="empty-cart">' +
+            '<i data-lucide="shopping-cart" class="lucide"></i>' +
+            '<h2 style="margin-bottom: 0.5rem;">Your cart is empty</h2>' +
+            '<p>Add graphic design items from the <a href="services.html" style="color: var(--primary-yellow);">Services page</a> to get a quote.</p>' +
+            '<a href="services.html" class="btn btn-primary" style="margin-top:1rem;">Browse Graphic Design</a>' +
+            '</div>';
+          if (window.lucide) lucide.createIcons();
+          return;
+        }
+        var rows = items.map(function (it) {
+          var line = it.price * it.qty;
+          return '<tr>' +
+            '<td class="ci-name">' + it.name + '</td>' +
+            '<td>' + fmt(it.price) + '</td>' +
+            '<td><span class="cart-qty">' +
+              '<button onclick="ReELCart.changeQty(\'' + it.id + '\',-1)">−</button>' +
+              '<span>' + it.qty + '</span>' +
+              '<button onclick="ReELCart.changeQty(\'' + it.id + '\',1)">+</button>' +
+            '</span></td>' +
+            '<td>' + fmt(line) + '</td>' +
+            '<td><button class="cart-qty" onclick="ReELCart.remove(\'' + it.id + '\')" style="border:none;background:none;color:#e03131;cursor:pointer;font-weight:600;">Remove</button></td>' +
+            '</tr>';
+        }).join('');
+        var total = window.ReELCart.total();
+        root.innerHTML =
+          '<div class="cart-shell"><table class="cart-table"><thead><tr>' +
+          '<th>Item</th><th>Unit Price</th><th>Qty</th><th>Line Total</th><th></th>' +
+          '</tr></thead><tbody>' + rows + '</tbody></table></div>' +
+          '<div class="cart-summary">' +
+            '<div>Total: <span class="total">' + fmt(total) + '</span> <small>excl. VAT</small></div>' +
+            '<div style="display:flex;gap:0.75rem;flex-wrap:wrap;">' +
+              '<a href="services.html" class="btn btn-secondary">Add More</a>' +
+              '<button class="btn btn-primary" id="checkout-wa">Request via WhatsApp</button>' +
+            '</div>' +
+          '</div>';
+        document.getElementById('checkout-wa').addEventListener('click', function () {
+          var lines = items.map(function (it) {
+            return '• ' + it.name + ' x' + it.qty + ' = ' + fmt(it.price * it.qty);
+          }).join('%0A');
+          var msg = 'Hi Re-EL! I would like a quote for these graphic design items:%0A' + lines +
+                    '%0A%0ATotal: ' + fmt(total) + '%0A%0APlease advise on next steps.';
+          window.open('https://wa.me/27813864024?text=' + msg, '_blank');
+        });
+        if (window.lucide) lucide.createIcons();
+      }
+      // re-render whenever cart changes
+      var origWrite = null;
+      document.addEventListener('DOMContentLoaded', function () {
+        render();
+      });
+      // expose render so store can refresh after updates
+      window.ReELCartRender = render;
+    })();
+  </script>
+</body>
+</html>

@@ -108,12 +108,17 @@ function throttle(func, limit) {
 }
 
 /**
- * Add loading spinner to element
+ * Add loading spinner (Uiverse loader) to element
  */
 function addLoadingSpinner(element) {
   const spinner = document.createElement('div');
   spinner.className = 're-el-spinner';
-  spinner.innerHTML = '<div class="spinner"></div>';
+  spinner.innerHTML =
+    '<div class="loader" aria-label="Loading">' +
+      '<svg viewBox="0 0 44 44">' +
+        '<rect x="2" y="2" width="40" height="40" rx="4"></rect>' +
+      '</svg>' +
+    '</div>';
   element.appendChild(spinner);
   return spinner;
 }

@@ -97,9 +97,14 @@
 <body>
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-family: Arial, sans-serif;">
         <div style="text-align: center;">
+            <div style="font-size: 0.7rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; opacity: 0.85; margin-bottom: 1.2rem;">Digital Branding Agency</div>
             <h1 style="font-size: 3rem; margin-bottom: 1rem; animation: fadeIn 1s ease-in;">Re-EL Digital Agency</h1>
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">Redirecting to homepage...</p>
-            <div style="width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid white; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+            <div class="loader" aria-label="Loading" style="margin: 0 auto;">
+                <svg viewBox="0 0 44 44">
+                    <rect x="2" y="2" width="40" height="40" rx="4"></rect>
+                </svg>
+            </div>
         </div>
     </div>
     
@@ -108,10 +113,42 @@
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .loader {
+            --path: #ffffff;
+            --dot: #ffffff;
+            --duration: 3s;
+            width: 44px;
+            height: 44px;
+            position: relative;
+            display: inline-block;
+        }
+        .loader:before {
+            content: "";
+            width: 6px; height: 6px; border-radius: 50%;
+            position: absolute; display: block;
+            background: var(--dot);
+            top: 37px; left: 19px;
+            transform: translate(-18px, -18px);
+            animation: dotRect var(--duration) cubic-bezier(0.785,0.135,0.15,0.86) infinite;
+        }
+        .loader svg { display: block; width: 100%; height: 100%; }
+        .loader svg rect {
+            fill: none; stroke: var(--path); stroke-width: 10px;
+            stroke-linejoin: round; stroke-linecap: round;
+            stroke-dasharray: 192 64 192 64; stroke-dashoffset: 0;
+            animation: pathRect 3s cubic-bezier(0.785,0.135,0.15,0.86) infinite;
+        }
+        @keyframes pathRect {
+            25% { stroke-dashoffset: 64; }
+            50% { stroke-dashoffset: 128; }
+            75% { stroke-dashoffset: 192; }
+            100% { stroke-dashoffset: 256; }
+        }
+        @keyframes dotRect {
+            25% { transform: translate(0,0); }
+            50% { transform: translate(18px,-18px); }
+            75% { transform: translate(0,-36px); }
+            100% { transform: translate(-18px,-18px); }
         }
     </style>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

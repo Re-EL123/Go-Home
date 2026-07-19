@@ -214,3 +214,67 @@ window.addEventListener('DOMContentLoaded', () => {
     new CanvasHeroAnimation('.hero');
   }
 });
+
+/* ============================================================
+SOUTH CLIFF DENTAL INSPIRED UI/UX ENHANCEMENTS
+- Staggered scroll reveals (.reveal-item / .reveal-text)
+- SVG line draw-on (.draw-line)
+- Scroll-hint equalizer activation
+- Auto star-particle decoration injection
+All vanilla JS. Colours & functionality preserved.
+============================================================ */
+(function () {
+  'use strict';
+
+  function initRevealOnScroll() {
+    const revealEls = document.querySelectorAll('.reveal-item, .reveal-text, .draw-line');
+    if (!revealEls.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  // Activate scroll-hint equalizer animation + smooth scroll on click
+  function initScrollHint() {
+    document.querySelectorAll('.scroll-hint').forEach(hint => {
+      hint.classList.add('scroll-hint-wave--animated');
+      hint.addEventListener('click', () => {
+        const targetSel = hint.getAttribute('data-target');
+        const target = targetSel ? document.querySelector(targetSel) : hint.parentElement.nextElementSibling;
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  }
+
+  // Inject decorative gold star particles into any .star-item (if not already present)
+  function initStarParticles() {
+    document.querySelectorAll('.star-item').forEach(item => {
+      if (item.querySelectorAll('.star-particle').length === 0) {
+        for (let i = 0; i < 5; i++) {
+          const dot = document.createElement('span');
+          dot.className = 'star-particle';
+          item.appendChild(dot);
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initRevealOnScroll();
+    initScrollHint();
+    initStarParticles();
+  });
+})();

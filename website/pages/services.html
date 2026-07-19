@@ -17,6 +17,7 @@
   <link rel="canonical" href="https://re-el-branding.rf.gd/pages/services.html" />
   <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -32,110 +33,485 @@
         <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
       </div>
       <nav>
-        >Home</a>
+        <a href="homepage.html">Home</a>
         <a href="homepage.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
         <a href="contact.html" class="cta-button">Contact</a>
       </nav>
     </div>
   </header>
 
   <main style="padding-top: 80px;">
-    <section style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/homepage-bg.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/homepage-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center; color: white;">Our Services</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 0;">Comprehensive digital solutions tailored to your business needs and goals</p>
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">Capabilities</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Services Built Around Your Brand</h1>
+          <p class="reveal-item delay-2" style="color: white;">From graphic design and web development to mobile apps — explore our categorized, transparent South African pricing and build your order your way.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="document.getElementById('graphic-design').scrollIntoView({behavior: 'smooth'})">Browse Graphic Design</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('web-services').scrollIntoView({behavior: 'smooth'})">View Web & App</button>
+          </div>
+          <div class="hero-stats reveal-item delay-4">
+            <div class="stat">
+              <div class="stat-number">20+</div>
+              <div class="stat-label">Design Items</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">3</div>
+              <div class="stat-label">App Platforms</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Local Pricing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-hint" data-target="#graphic-design" aria-label="Scroll to services">
+        <svg class="scroll-hint-wave" viewBox="0 0 30 22" aria-hidden="true">
+          <rect class="scroll-hint-wave-bar" x="3"  y="4" width="3" height="14" rx="1.5"></rect>
+          <rect class="scroll-hint-wave-bar" x="11" y="4" width="3" height="14" rx="1.5"></rect>
+          <rect class="scroll-hint-wave-bar" x="19" y="4" width="3" height="14" rx="1.5"></rect>
+          <rect class="scroll-hint-wave-bar" x="27" y="4" width="3" height="14" rx="1.5"></rect>
+        </svg>
+        <span class="scroll-hint-label">Scroll</span>
+      </button>
+    </section>
+
+    <!-- ===================== GRAPHIC DESIGN ===================== -->
+    <section class="section section-light" id="graphic-design" style="scroll-margin-top: 90px;">
+      <div class="container">
+        <div class="category-head reveal-item">
+          <span class="cat-icon"><i data-lucide="palette" class="lucide"></i></span>
+          <div>
+            <span class="eyebrow">Category 01</span>
+            <h2 style="margin-bottom: 0;">Graphic Design</h2>
+          </div>
+        </div>
+        <p class="reveal-item delay-1" style="color: var(--text-secondary); max-width: 760px;">Affordable, print-ready design for your brand — add any item to your cart and request a quote via WhatsApp. All prices in ZAR, excl. VAT.</p>
+
+        <div class="price-grid">
+          <!-- Logo -->
+          <div class="card price-card reveal-item">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="pen-tool" class="lucide"></i></span>
+              <h4>Logo Design</h4>
+            </div>
+            <p class="item-desc">3 concepts, 2 revisions, vector + PNG source files.</p>
+            <div class="price">R650 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-logo","name":"Logo Design","price":650}'>Add to Cart</button>
+          </div>
+          <!-- Business Card -->
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="id-card" class="lucide"></i></span>
+              <h4>Business Card</h4>
+            </div>
+            <p class="item-desc">Double-sided, print-ready PDF (90×54mm).</p>
+            <div class="price">R180 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-card","name":"Business Card Design","price":180}'>Add to Cart</button>
+          </div>
+          <!-- Flyer -->
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="file-text" class="lucide"></i></span>
+              <h4>Flyer (A5 / A4)</h4>
+            </div>
+            <p class="item-desc">Single or double-sided promo flyer, print-ready.</p>
+            <div class="price">R250 <small>A5 / R350 A4</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-flyer","name":"Flyer Design (A5/A4)","price":250}'>Add to Cart</button>
+          </div>
+          <!-- Poster -->
+          <div class="card price-card reveal-item delay-3">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="image" class="lucide"></i></span>
+              <h4>Poster (A2 / A1)</h4>
+            </div>
+            <p class="item-desc">Event or promo poster, high-res print-ready.</p>
+            <div class="price">R400 <small>A2 / R550 A1</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-poster","name":"Poster Design (A2/A1)","price":400}'>Add to Cart</button>
+          </div>
+          <!-- Brochure -->
+          <div class="card price-card reveal-item">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="book-open" class="lucide"></i></span>
+              <h4>Brochure / Catalogue</h4>
+            </div>
+            <p class="item-desc">Tri-fold or multi-page, up to 8 pages.</p>
+            <div class="price">R750 <small>from</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-brochure","name":"Brochure / Catalogue Design","price":750}'>Add to Cart</button>
+          </div>
+          <!-- Banner -->
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="flag" class="lucide"></i></span>
+              <h4>Pull-up / Roller Banner</h4>
+            </div>
+            <p class="item-desc">850×2000mm standard exhibition banner.</p>
+            <div class="price">R350 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-banner","name":"Pull-up / Roller Banner","price":350}'>Add to Cart</button>
+          </div>
+          <!-- Sticker -->
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="sticker" class="lucide"></i></span>
+              <h4>Sticker Design</h4>
+            </div>
+            <p class="item-desc">Die-cut or standard, print-ready artwork.</p>
+            <div class="price">R200 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-sticker","name":"Sticker Design","price":200}'>Add to Cart</button>
+          </div>
+          <!-- T-shirt Print -->
+          <div class="card price-card reveal-item delay-3">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="shirt" class="lucide"></i></span>
+              <h4>T-Shirt Print</h4>
+            </div>
+            <p class="item-desc">Front/back artwork, screen & DTG ready.</p>
+            <div class="price">R220 <small>per design</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-tshirt","name":"T-Shirt Print Design","price":220}'>Add to Cart</button>
+          </div>
+          <!-- Mug Print -->
+          <div class="card price-card reveal-item">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="coffee" class="lucide"></i></span>
+              <h4>Mug Print</h4>
+            </div>
+            <p class="item-desc">Wrap-around mug artwork, print-ready.</p>
+            <div class="price">R180 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-mug","name":"Mug Print Design","price":180}'>Add to Cart</button>
+          </div>
+          <!-- Cap / Apparel -->
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="hard-hat" class="lucide"></i></span>
+              <h4>Cap / Branded Apparel</h4>
+            </div>
+            <p class="item-desc">Cap, beanie or workwear embroidery artwork.</p>
+            <div class="price">R200 <small>per design</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-apparel","name":"Cap / Branded Apparel Design","price":200}'>Add to Cart</button>
+          </div>
+          <!-- Gazebo -->
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="tent" class="lucide"></i></span>
+              <h4>Gazebo / Branded Tent</h4>
+            </div>
+            <p class="item-desc">3×3m gazebo full-bleed artwork.</p>
+            <div class="price">R450 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-gazebo","name":"Gazebo / Branded Tent Design","price":450}'>Add to Cart</button>
+          </div>
+          <!-- Boards / Signage -->
+          <div class="card price-card reveal-item delay-3">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="rectangle-horizontal" class="lucide"></i></span>
+              <h4>Boards / Signage</h4>
+            </div>
+            <p class="item-desc">PVC, Chromadek or vinyl sign artwork.</p>
+            <div class="price">R380 <small>from</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-boards","name":"Boards / Signage Design","price":380}'>Add to Cart</button>
+          </div>
+          <!-- Letterhead -->
+          <div class="card price-card reveal-item">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="file" class="lucide"></i></span>
+              <h4>Letterhead / Invoice</h4>
+            </div>
+            <p class="item-desc">Branded stationery set (letterhead + invoice).</p>
+            <div class="price">R250 <small>set</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-letterhead","name":"Letterhead / Invoice Design","price":250}'>Add to Cart</button>
+          </div>
+          <!-- Social Media Kit -->
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="share-2" class="lucide"></i></span>
+              <h4>Social Media Kit</h4>
+            </div>
+            <p class="item-desc">5 branded post templates + profile artwork.</p>
+            <div class="price">R500 <small>kit</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-social","name":"Social Media Kit","price":500}'>Add to Cart</button>
+          </div>
+          <!-- Menu -->
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="utensils" class="lucide"></i></span>
+              <h4>Menu Design</h4>
+            </div>
+            <p class="item-desc">Restaurant/menu layout, print + screen.</p>
+            <div class="price">R350 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-menu","name":"Menu Design","price":350}'>Add to Cart</button>
+          </div>
+          <!-- Packaging Label -->
+          <div class="card price-card reveal-item delay-3">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="package" class="lucide"></i></span>
+              <h4>Packaging Label</h4>
+            </div>
+            <p class="item-desc">Product label / sticker, dieline-ready.</p>
+            <div class="price">R300 <small>from</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-label","name":"Packaging Label Design","price":300}'>Add to Cart</button>
+          </div>
+          <!-- ID / Name Badge -->
+          <div class="card price-card reveal-item">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="badge-check" class="lucide"></i></span>
+              <h4>ID / Name Badge</h4>
+            </div>
+            <p class="item-desc">Staff or event badge artwork (set of 10).</p>
+            <div class="price">R220 <small>set</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-badge","name":"ID / Name Badge Design","price":220}'>Add to Cart</button>
+          </div>
+          <!-- Car Branding Decal -->
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="truck" class="lucide"></i></span>
+              <h4>Car Branding Decal</h4>
+            </div>
+            <p class="item-desc">Vehicle vinyl decal artwork (per panel).</p>
+            <div class="price">R420 <small>per panel</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-car","name":"Car Branding Decal Design","price":420}'>Add to Cart</button>
+          </div>
+          <!-- Roll-up Standee -->
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top">
+              <span class="item-icon"><i data-lucide="rectangle-vertical" class="lucide"></i></span>
+              <h4>Roll-up Standee</h4>
+            </div>
+            <p class="item-desc">800×2000mm retractable standee artwork.</p>
+            <div class="price">R380 <small>once-off</small></div>
+            <button class="btn btn-primary" data-add='{"id":"gd-standee","name":"Roll-up Standee Design","price":380}'>Add to Cart</button>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="cart.html" class="btn btn-secondary">View Cart &amp; Request Quote</a>
+        </div>
       </div>
     </section>
 
-    <section class="section section-light">
+    <!-- ===================== WEB DESIGN & DEVELOPMENT ===================== -->
+    <section class="section section-gradient" id="web-services" style="scroll-margin-top: 90px;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+        <div class="category-head reveal-item">
+          <span class="cat-icon"><i data-lucide="monitor" class="lucide"></i></span>
           <div>
-            <h2 style="margin-bottom: 1rem;">Web Development</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Custom websites and web applications built with modern technologies, responsive design, and SEO optimization in mind.</p>
-            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-              <li style="margin-bottom: 0.5rem;">✓ Responsive Web Design</li>
-              <li style="margin-bottom: 0.5rem;">✓ Progressive Web Apps (PWA)</li>
-              <li style="margin-bottom: 0.5rem;">✓ E-commerce Solutions</li>
-              <li style="margin-bottom: 0.5rem;">✓ API Development & Integration</li>
-              <li style="margin-bottom: 0.5rem;">✓ Performance Optimization</li>
-            </ul>
-            <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get Started</button>
+            <span class="eyebrow">Category 02</span>
+            <h2 style="margin-bottom: 0;">Web Design &amp; Development</h2>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 4rem; color: var(--primary-yellow); margin-bottom: 1rem;">💻</div>
-            <p>Building fast, modern, and SEO-friendly websites that drive results</p>
+        </div>
+        <p class="reveal-item delay-1" style="color: rgba(255,255,255,0.85); max-width: 760px;">Fast, responsive, SEO-ready websites and web apps. Pick individual items or a package below.</p>
+
+        <h3 class="reveal-text" style="color: var(--text-light); margin: 2.5rem 0 0;">Individual Items</h3>
+        <div class="price-grid">
+          <div class="card price-card reveal-item">
+            <div class="price-top"><span class="item-icon"><i data-lucide="layout" class="lucide"></i></span><h4>Landing Page</h4></div>
+            <p class="item-desc">Single high-converting page, responsive.</p>
+            <div class="price">R1,500 <small>once-off</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top"><span class="item-icon"><i data-lucide="globe" class="lucide"></i></span><h4>Business Website (5 pgs)</h4></div>
+            <p class="item-desc">Brochure site, CMS, contact form, SEO base.</p>
+            <div class="price">R4,500 <small>from</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="card price-card reveal-item delay-2">
+            <div class="price-top"><span class="item-icon"><i data-lucide="store" class="lucide"></i></span><h4>E-commerce Store</h4></div>
+            <p class="item-desc">Online shop, payments, up to 50 products.</p>
+            <div class="price">R8,500 <small>from</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="card price-card reveal-item delay-3">
+            <div class="price-top"><span class="item-icon"><i data-lucide="webhook" class="lucide"></i></span><h4>Web App / Dashboard</h4></div>
+            <p class="item-desc">Custom portal, auth, database, APIs.</p>
+            <div class="price">R15,000 <small>from</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="card price-card reveal-item">
+            <div class="price-top"><span class="item-icon"><i data-lucide="search" class="lucide"></i></span><h4>SEO Setup</h4></div>
+            <p class="item-desc">On-page SEO, sitemap, analytics, 1 month.</p>
+            <div class="price">R1,200 <small>once-off</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="card price-card reveal-item delay-1">
+            <div class="price-top"><span class="item-icon"><i data-lucide="wrench" class="lucide"></i></span><h4>Maintenance / Month</h4></div>
+            <p class="item-desc">Updates, backups, security, support.</p>
+            <div class="price">R650 <small>/ month</small></div>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+        </div>
+
+        <h3 class="reveal-text" style="color: var(--text-light); margin: 3rem 0 0;">Packages</h3>
+        <div class="packages">
+          <div class="package-card reveal-item">
+            <span class="tier">Starter</span>
+            <h4>Web Starter</h4>
+            <div class="pkg-price">R4,500</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> 5-page business website</li>
+              <li><i data-lucide="check" class="lucide"></i> Mobile responsive</li>
+              <li><i data-lucide="check" class="lucide"></i> Contact form + CMS</li>
+              <li><i data-lucide="check" class="lucide"></i> Basic SEO setup</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+          </div>
+          <div class="package-card featured reveal-item delay-1">
+            <span class="tier">Most Popular</span>
+            <h4>Web Pro</h4>
+            <div class="pkg-price">R9,500</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Up to 12 pages</li>
+              <li><i data-lucide="check" class="lucide"></i> Blog + CMS</li>
+              <li><i data-lucide="check" class="lucide"></i> Advanced SEO + Analytics</li>
+              <li><i data-lucide="check" class="lucide"></i> 3 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="package-card reveal-item delay-2">
+            <span class="tier">Enterprise</span>
+            <h4>Web Enterprise</h4>
+            <div class="pkg-price">R18,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Custom web app / portal</li>
+              <li><i data-lucide="check" class="lucide"></i> User accounts + database</li>
+              <li><i data-lucide="check" class="lucide"></i> Integrations & APIs</li>
+              <li><i data-lucide="check" class="lucide"></i> 6 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-gradient">
+    <!-- ===================== APP DESIGN & DEVELOPMENT ===================== -->
+    <section class="section section-light" id="app-services" style="scroll-margin-top: 90px;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 4rem; color: var(--primary-yellow); margin-bottom: 1rem;">📱</div>
-            <p>Native and cross-platform mobile applications for iOS and Android</p>
-          </div>
+        <div class="category-head reveal-item">
+          <span class="cat-icon"><i data-lucide="smartphone" class="lucide"></i></span>
           <div>
-            <h2 style="margin-bottom: 1rem;">App Development</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Innovative mobile applications designed for user engagement and business growth across all platforms.</p>
-            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-              <li style="margin-bottom: 0.5rem;">✓ iOS App Development</li>
-              <li style="margin-bottom: 0.5rem;">✓ Android App Development</li>
-              <li style="margin-bottom: 0.5rem;">✓ Cross-platform Solutions</li>
-              <li style="margin-bottom: 0.5rem;">✓ App UI/UX Design</li>
-              <li style="margin-bottom: 0.5rem;">✓ App Store Optimization</li>
-            </ul>
-            <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get Started</button>
+            <span class="eyebrow">Category 03</span>
+            <h2 style="margin-bottom: 0;">App Design &amp; Development</h2>
           </div>
         </div>
-      </div>
-    </section>
+        <p class="reveal-item delay-1" style="color: var(--text-secondary); max-width: 760px;">Native and cross-platform apps for Android, iOS and Windows — designed, built and published.</p>
 
-    <section class="section section-light">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-          <div>
-            <h2 style="margin-bottom: 1rem;">Branding & Design</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Create a powerful brand identity that resonates with your audience and sets you apart from competition.</p>
-            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-              <li style="margin-bottom: 0.5rem;">✓ Logo Design</li>
-              <li style="margin-bottom: 0.5rem;">✓ Brand Identity Systems</li>
-              <li style="margin-bottom: 0.5rem;">✓ Visual Style Guides</li>
-              <li style="margin-bottom: 0.5rem;">✓ Packaging Design</li>
-              <li style="margin-bottom: 0.5rem;">✓ Rebranding Services</li>
+        <!-- Android -->
+        <h3 class="reveal-text" style="margin: 2.5rem 0 0;"><i data-lucide="android" class="lucide" style="width:22px;height:22px;vertical-align:middle;color:var(--primary-yellow);"></i> Android</h3>
+        <div class="packages">
+          <div class="package-card reveal-item">
+            <span class="tier">Starter</span>
+            <h4>Android Starter</h4>
+            <div class="pkg-price">R8,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Single-screen utility app</li>
+              <li><i data-lucide="check" class="lucide"></i> Basic UI/UX design</li>
+              <li><i data-lucide="check" class="lucide"></i> Play Store publish</li>
             </ul>
-            <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get Started</button>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 4rem; color: var(--primary-yellow); margin-bottom: 1rem;">🎨</div>
-            <p>Strategic branding and creative design that tells your story</p>
+          <div class="package-card featured reveal-item delay-1">
+            <span class="tier">Most Popular</span>
+            <h4>Android Pro</h4>
+            <div class="pkg-price">R16,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Multi-screen app + auth</li>
+              <li><i data-lucide="check" class="lucide"></i> Backend & API integration</li>
+              <li><i data-lucide="check" class="lucide"></i> 3 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="package-card reveal-item delay-2">
+            <span class="tier">Enterprise</span>
+            <h4>Android Enterprise</h4>
+            <div class="pkg-price">R28,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Complex app / SaaS</li>
+              <li><i data-lucide="check" class="lucide"></i> Payments, push, offline</li>
+              <li><i data-lucide="check" class="lucide"></i> 6 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-gradient">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 4rem; color: var(--primary-yellow); margin-bottom: 1rem;">📈</div>
-            <p>Data-driven marketing strategies that increase visibility and engagement</p>
-          </div>
-          <div>
-            <h2 style="margin-bottom: 1rem;">Digital Marketing</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">Grow your online presence and reach your target audience with strategic digital marketing campaigns.</p>
-            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
-              <li style="margin-bottom: 0.5rem;">✓ SEO Optimization</li>
-              <li style="margin-bottom: 0.5rem;">✓ Social Media Marketing</li>
-              <li style="margin-bottom: 0.5rem;">✓ Content Creation</li>
-              <li style="margin-bottom: 0.5rem;">✓ PPC Advertising</li>
-              <li style="margin-bottom: 0.5rem;">✓ Email Marketing Campaigns</li>
+        <!-- iOS -->
+        <h3 class="reveal-text" style="margin: 3rem 0 0;"><i data-lucide="apple" class="lucide" style="width:22px;height:22px;vertical-align:middle;color:var(--primary-yellow);"></i> iOS (iPhone / iPad)</h3>
+        <div class="packages">
+          <div class="package-card reveal-item">
+            <span class="tier">Starter</span>
+            <h4>iOS Starter</h4>
+            <div class="pkg-price">R9,500</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Single-screen app</li>
+              <li><i data-lucide="check" class="lucide"></i> SwiftUI design</li>
+              <li><i data-lucide="check" class="lucide"></i> App Store publish</li>
             </ul>
-            <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get Started</button>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+          </div>
+          <div class="package-card featured reveal-item delay-1">
+            <span class="tier">Most Popular</span>
+            <h4>iOS Pro</h4>
+            <div class="pkg-price">R18,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Multi-screen + auth</li>
+              <li><i data-lucide="check" class="lucide"></i> Backend integration</li>
+              <li><i data-lucide="check" class="lucide"></i> 3 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="package-card reveal-item delay-2">
+            <span class="tier">Enterprise</span>
+            <h4>iOS Enterprise</h4>
+            <div class="pkg-price">R30,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Complex / B2B app</li>
+              <li><i data-lucide="check" class="lucide"></i> Integrations + security</li>
+              <li><i data-lucide="check" class="lucide"></i> 6 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+          </div>
+        </div>
+
+        <!-- Windows -->
+        <h3 class="reveal-text" style="margin: 3rem 0 0;"><i data-lucide="monitor" class="lucide" style="width:22px;height:22px;vertical-align:middle;color:var(--primary-yellow);"></i> Windows</h3>
+        <div class="packages">
+          <div class="package-card reveal-item">
+            <span class="tier">Starter</span>
+            <h4>Windows Starter</h4>
+            <div class="pkg-price">R10,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Desktop utility app</li>
+              <li><i data-lucide="check" class="lucide"></i> Standard UI</li>
+              <li><i data-lucide="check" class="lucide"></i> Installer build</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
+          </div>
+          <div class="package-card featured reveal-item delay-1">
+            <span class="tier">Most Popular</span>
+            <h4>Windows Pro</h4>
+            <div class="pkg-price">R19,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Full desktop app + DB</li>
+              <li><i data-lucide="check" class="lucide"></i> Cloud sync</li>
+              <li><i data-lucide="check" class="lucide"></i> 3 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          </div>
+          <div class="package-card reveal-item delay-2">
+            <span class="tier">Enterprise</span>
+            <h4>Windows Enterprise</h4>
+            <div class="pkg-price">R32,000</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Multi-module system</li>
+              <li><i data-lucide="check" class="lucide"></i> Licensing + auth</li>
+              <li><i data-lucide="check" class="lucide"></i> 6 months support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-secondary">Get Quote</a>
           </div>
         </div>
       </div>
@@ -143,7 +519,8 @@
 
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
-        <h2 style="color: var(--text-light); margin-bottom: 2rem;">Ready to Transform Your Business?</h2>
+        <div class="star-item reveal-item" style="margin-bottom: 1rem;"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></div>
+        <h2 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 2rem;">Ready to Transform Your Business?</h2>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Let's discuss which services are right for your goals and create a customized solution.</p>
         <div class="hero-buttons" style="justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.href='contact.html'">Schedule Consultation</button>
@@ -173,5 +550,23 @@
   </script>
    <script src="../js/utils.js"></script>
  <script src="../js/main.js"></script>
+ <script src="../js/animations.js"></script>
+ <script src="../js/store.js"></script>
+ <button class="music-toggle" aria-label="Toggle calming music">
+   <i data-lucide="volume-2" class="music-icon lucide"></i>
+   <span class="music-label">Music On</span>
+ </button>
+ <script>if (window.lucide) lucide.createIcons();</script>
+ <script>
+   // Scroll to category when arriving via #hash from another page
+   window.addEventListener('load', function () {
+     if (window.location.hash) {
+       var target = document.querySelector(window.location.hash);
+       if (target) {
+         setTimeout(function () { target.scrollIntoView({ behavior: 'smooth' }); }, 300);
+       }
+     }
+   });
+ </script>
 </body>
 </html>

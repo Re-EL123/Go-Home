@@ -12,9 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
   <header>
@@ -28,6 +27,10 @@
         <a href="homepage.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
         <a href="contact.html" class="cta-button">Contact</a>
       </nav>
     </div>
@@ -35,61 +38,82 @@
 
   <main style="padding-top: 80px;">
     <!-- Hero Section -->
-    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/bg-hero.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/bg-hero.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center; color: var(--primary-yellow);">Our Portfolio</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Discover our latest projects showcasing digital excellence and creative innovation</p>
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">Selected Work</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Digital Excellence, Made Tangible</h1>
+          <p class="reveal-item delay-2" style="color: white;">Discover our latest projects — from betting platforms to community apps and brand identities — showcasing creative innovation built for real results.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
+            <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Start Yours</button>
+          </div>
+          <div class="hero-stats reveal-item delay-4">
+            <div class="stat">
+              <div class="stat-number">6+</div>
+              <div class="stat-label">Featured Builds</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Industries</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">2026</div>
+              <div class="stat-label">Always Evolving</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Portfolio Section with Real Projects -->
-    <section class="section section-light">
+    <section class="section section-light" id="projects">
       <div class="container">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h2>
+        <h2 class="reveal-text" style="text-align: center; margin-bottom: 3rem;">Featured Projects</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
           
           <!-- PakBet Project -->
-          <div class="card" style="overflow: hidden;">
+          <div class="card reveal-item" style="overflow: hidden;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); display: flex; align-items: center; justify-content: center; color: var(--primary-yellow); font-size: 2rem; font-weight: bold;">PakBet</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">PakBet - Online Betting Platform</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
             <p>An innovative online betting application with multiple sports categories including Soccer, Cricket, Aviator, and Casino. Built with modern web technologies for seamless user experience.</p>
             <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: HTML5, JavaScript, Firebase, Responsive Design</p>
-            <a href="https://www.pakbet.online" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+            <a href="https://www.pakbet.online" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project</a>
           </div>
 
           <!-- Street Connect Project -->
-          <div class="card" style="overflow: hidden;">
+          <div class="card reveal-item delay-1" style="overflow: hidden;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #5b6ef5 0%, #4c63d2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; text-align: center; padding: 1rem;">Street Connect</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Street Connect - Community Platform</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
             <p>Connect with local vendors, discover services, share posts, and grow your business all in one place. A vibrant community platform for South African entrepreneurs and service providers.</p>
             <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, Node.js, MongoDB, Real-time Features</p>
-            <a href="https://www.streetconnect-mzansi.co.za" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+            <a href="https://www.streetconnect-mzansi.co.za" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project</a>
           </div>
 
           <!-- Re-Player Music App -->
-          <div class="card" style="overflow: hidden;">
+          <div class="card reveal-item delay-2" style="overflow: hidden;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; text-align: center; padding: 1rem;">Re-Player</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Re-Player - Music Application</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
             <p>A PWM-based music player with HQ equalizer presets and advanced audio processing. Experience high-quality music streaming with intuitive controls and professional audio enhancement.</p>
             <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: React, JavaScript, Web Audio API, Modern UI</p>
-            <a href="https://re-player.vercel.app" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+            <a href="https://re-player.vercel.app" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project</a>
           </div>
 
           <!-- Interactive Portal -->
-          <div class="card" style="overflow: hidden;">
+          <div class="card reveal-item delay-3" style="overflow: hidden;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">The Portal</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Interactive Versatile Portal</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
             <p>This advanced portfolio showcasing tools and stacks with attractive effects and interactive elements. A demonstration of cutting-edge web technologies and user experience design principles.</p>
             <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Technologies: Next.js, TypeScript, Tailwind CSS, Interactive Animations</p>
-            <a href="https://re-el123.github.io/The-Portal/" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project →</a>
+            <a href="https://re-el123.github.io/The-Portal/" target="_blank" style="color: var(--primary-yellow); text-decoration: none; font-weight: 600; margin-top: 1rem; display: inline-block;">View Project</a>
           </div>
 
           <!-- Branding Project Template -->
-          <div class="card" style="overflow: hidden;">
+          <div class="card reveal-item delay-4" style="overflow: hidden;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">Brand Identity</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Brand Identity & Logo Design</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Branding & Design</p>
@@ -98,7 +122,7 @@
           </div>
 
           <!-- E-wallet Project (Coming Soon) -->
-          <div class="card" style="overflow: hidden; opacity: 0.8;">
+          <div class="card reveal-item delay-5" style="overflow: hidden; opacity: 0.8;">
             <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 1rem;">E-Wallet</div>
             <h3 style="margin-bottom: 0.5rem; margin-top: 1rem;">Re-ZA E-Wallet Platform</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Web Development</p>
@@ -113,7 +137,8 @@
     <!-- CTA Section -->
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
-        <h2 style="color: var(--text-light); margin-bottom: 2rem;">Ready to Start Your Next Project?</h2>
+        <div class="star-item reveal-item" style="margin-bottom: 1rem;"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></div>
+        <h2 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 2rem;">Ready to Start Your Next Project?</h2>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Let's discuss your vision and create something amazing together.</p>
         <div class="hero-buttons" style="justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get Started</button>
@@ -144,5 +169,12 @@
   </script>
   <script src="../js/utils.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <button class="music-toggle" aria-label="Toggle calming music">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

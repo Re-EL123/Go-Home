@@ -17,6 +17,7 @@
   <link rel="canonical" href="https://re-el-branding.rf.gd/pages/client_success_stories.html" />
   <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -35,49 +36,60 @@
         <a href="homepage.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
         <a href="contact.html" class="cta-button">Contact</a>
       </nav>
     </div>
   </header>
 
   <main style="padding-top: 80px;">
-    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center;"; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;>
+    <section class="hero" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.7), rgba(0,31,63,0.7)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center;">Client Success Stories</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">Real transformations and results from our amazing clients</p>
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">Testimonials</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Real Results, Real Relationships</h1>
+          <p class="reveal-item delay-2" style="color: white;">Don't just take our word for it — hear from the businesses we've helped grow, launch, and transform across South Africa and beyond.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="document.getElementById('stories').scrollIntoView({behavior: 'smooth'})">Read Stories</button>
+            <button class="btn btn-secondary" onclick="window.location.href='contact.html'">Be Next</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section section-light">
+    <section class="section section-light" id="stories">
       <div class="container">
-        <h2 style="text-align: center; margin-bottom: 3rem;">Client Testimonials</h2>
+        <h2 class="reveal-text" style="text-align: center; margin-bottom: 3rem;">Client Testimonials</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"Re-EL completely transformed our online presence. Within 6 months, our website traffic increased by 250% and we tripled our online conversions. Highly recommended!"</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">Sarah Johnson</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">CEO, Tech Startup</p>
           </div>
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item delay-1" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"The app development team at Re-EL delivered exactly what we envisioned. Professional, creative, and always responsive to feedback. Great team!"</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">Michael Chen</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">Founder, Mobile Solutions</p>
           </div>
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item delay-2" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"Our branding project was exceptional. They captured our brand essence perfectly and created a visual identity that resonates with our customers."</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">Emma Williams</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">Marketing Director, Fashion Brand</p>
           </div>
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item delay-3" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"Outstanding customer service and technical excellence. Re-EL's team guided us through every step and delivered a solution that exceeded our expectations."</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">David Brown</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">Operations Manager, E-commerce</p>
           </div>
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item delay-4" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"The digital marketing campaign results were phenomenal. Engagement rates increased by 300% and we generated qualified leads that converted into loyal customers."</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">Lisa Martinez</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">Business Owner, SaaS Company</p>
           </div>
-          <div class="card" style="border-left: 4px solid var(--primary-yellow);">
+          <div class="card reveal-item delay-5" style="border-left: 4px solid var(--primary-yellow);">
             <p style="font-style: italic; margin-bottom: 1rem; line-height: 1.8;">"Professional, creative, and results-driven. Working with Re-EL was a game-changer for our business. We've already planned our next project together!"</p>
             <p style="margin-bottom: 0.5rem; font-weight: 600;">James Wilson</p>
             <p style="margin: 0; color: #666; font-size: 0.9rem;">Director, Digital Agency</p>
@@ -88,7 +100,8 @@
 
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
-        <h2 style="color: var(--text-light); margin-bottom: 2rem;">Ready to Become Our Next Success Story?</h2>
+        <div class="star-item reveal-item" style="margin-bottom: 1rem;"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></div>
+        <h2 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 2rem;">Ready to Become Our Next Success Story?</h2>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Let's work together to achieve your business goals and create remarkable results.</p>
         <div class="hero-buttons" style="justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.href='contact.html'">Start Now</button>
@@ -116,5 +129,14 @@
   <script>
     AOS.init({duration: 1000, once: true, offset: 100});
   </script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <button class="music-toggle" aria-label="Toggle calming music">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

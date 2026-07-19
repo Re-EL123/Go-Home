@@ -54,27 +54,57 @@
       font-style: italic;
     }
 
-    /* ===== Spinner ===== */
-    .spinner {
+    /* ===== Uiverse Loader (recolored Re-EL navy/yellow) ===== */
+    .loader {
+      --path: #0b0c10;
+      --dot: #fdd835;
+      --duration: 3s;
+      width: 44px;
+      height: 44px;
+      position: relative;
       margin-top: 30px;
-      width: 50px;
-      height: 50px;
-      border: 4px solid rgba(253, 216, 53, 0.2);
-      border-top: 4px solid #fdd835;
+    }
+    .loader:before {
+      content: "";
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      animation: spin 1.5s linear infinite;
-      box-shadow: 0 0 10px rgba(253, 216, 53, 0.3);
+      position: absolute;
+      display: block;
+      background: var(--dot);
+      top: 37px;
+      left: 19px;
+      transform: translate(-18px, -18px);
+      animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
     }
-
-    /* ===== Animations ===== */
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+    .loader svg { display: block; width: 100%; height: 100%; }
+    .loader svg rect,
+    .loader svg polygon,
+    .loader svg circle {
+      fill: none;
+      stroke: var(--path);
+      stroke-width: 10px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
+    .loader svg rect {
+      stroke-dasharray: 192 64 192 64;
+      stroke-dashoffset: 0;
+      animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    }
+    @keyframes pathRect {
+      25% { stroke-dashoffset: 64; }
+      50% { stroke-dashoffset: 128; }
+      75% { stroke-dashoffset: 192; }
+      100% { stroke-dashoffset: 256; }
+    }
+    @keyframes dotRect {
+      25% { transform: translate(0, 0); }
+      50% { transform: translate(18px, -18px); }
+      75% { transform: translate(0, -36px); }
+      100% { transform: translate(-18px, -18px); }
+    }
+    .loader { display: inline-block; margin: 0 16px; }
 
     /* Pulse glow synced with spinner */
     @keyframes pulse-glow {
@@ -109,15 +139,63 @@
         transform: translateY(0);
       }
     }
+
+    /* ===== South Cliff inspired accents (colours unchanged) ===== */
+    .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #fdd835;
+      margin-bottom: 1.2rem;
+      opacity: 0.85;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    .star-accent {
+      font-size: 2rem;
+      color: #fdd835;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    .star-accent .star-particle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fdd835;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      animation: pulseParticle 2.4s ease-out infinite;
+    }
+    .star-accent .star-particle:nth-child(2) { animation-delay: 0.4s; }
+    .star-accent .star-particle:nth-child(3) { animation-delay: 0.8s; }
+    .star-accent .star-particle:nth-child(4) { animation-delay: 1.2s; }
+    .star-accent .star-particle:nth-child(5) { animation-delay: 1.6s; }
+    @keyframes pulseParticle {
+      0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.4); }
+      40%  { opacity: 0.9; }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(2.6) translateY(-14px); }
+    }
+    .tagline { letter-spacing: 1px; }
   </style>
 </head>
 <body>
   <div class="logo-container fade-in">
+    <span class="star-accent"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></span>
+    <div class="eyebrow">Digital Branding Agency · South Africa</div>
     <img src="logo.jpg" alt="Re-EL Logo" />
     <div class="logo-text">Re-EL</div>
     <div class="tagline">“DESIGNS THAT LIGHT UP YOUR BRAND”</div>
   </div>
 
-  <div class="spinner"></div>
+  <div class="loader" aria-label="Loading">
+    <svg viewBox="0 0 44 44">
+      <rect x="2" y="2" width="40" height="40" rx="4"></rect>
+    </svg>
+  </div>
 </body>
 </html>

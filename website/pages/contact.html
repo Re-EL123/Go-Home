@@ -22,8 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/lucide.min.css">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"><"/>/script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <style>
     .form-group { margin-bottom: 1.5rem; }
@@ -32,7 +31,6 @@
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-yellow); }
     .form-group input.error, .form-group select.error, .form-group textarea.error { border-color: #ef4444; background-color: rgba(239, 68, 68, 0.05); }
   </style>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css"/>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -49,6 +47,10 @@
         <a href="../index.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
         <a href="contact.html" class="cta-button">Contact</a>
       </nav>
     </div>
@@ -56,20 +58,27 @@
 
   <main style="padding-top: 80px;">
     <!-- Hero Section -->
-    <section class="section" style="min-height: 400px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center; color: white;">Let's Work Together</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 0;">Whether you have questions about our services or want to discuss your project, we're here to help and ready to bring your vision to life.</p>
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">Get In Touch</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Let's Work Together</h1>
+          <p class="reveal-item delay-2" style="color: white;">Whether you have questions about our services or want to discuss your project, we're here to help — from a quick quote to a full build, ready to bring your vision to life.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="document.getElementById('enquiry').scrollIntoView({behavior: 'smooth'})">Send Enquiry</button>
+            <button class="btn btn-secondary" onclick="window.open('https://wa.me/27813864024', '_blank')">WhatsApp Us</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section section-light">
       <div class="container">
-        <div style="max-width: 900px; margin: 0 auto;">
-          <h2 style="text-align: center; margin-bottom: 3rem;">Service Enquiry Form</h2>
+        <div style="max-width: 900px; margin: 0 auto;" id="enquiry">
+          <h2 class="reveal-text" style="text-align: center; margin-bottom: 3rem;">Service Enquiry Form</h2>
           
-          <div class="card">
+          <div class="card reveal-item">
             <h3 style="margin-bottom: 2rem;">Tell us about your project</h3>
             
             <form id="contactForm" onsubmit="return false;">
@@ -134,11 +143,11 @@
             </form>
           </div>
 
-          <div style="margin-top: 2rem; padding: 2rem; background: rgba(255, 193, 7, 0.1); border-radius: 8px; text-align: center;">
+          <div class="reveal-item delay-2" style="margin-top: 2rem; padding: 2rem; background: rgba(255, 193, 7, 0.1); border-radius: 8px; text-align: center;">
             <h3 style="margin-bottom: 1rem;">Other Ways to Connect</h3>
             <p style="margin-bottom: 1rem;">Chat with us directly on WhatsApp for quick responses.</p>
             <a href="https://wa.me/27813864024" target="_blank" class="btn btn-primary">Message on WhatsApp</a>
-            <p style="margin-top: 2rem; color: #666;">📍 Based in Johannesburg, South Africa</p>
+            <p style="margin-top: 2rem; color: #666;"><i data-lucide="map-pin" class="lucide" style="width:16px;height:16px;vertical-align:middle;"></i> Based in Johannesburg, South Africa</p>
             <p style="color: #666;">+27 81 386 4024</p>
           </div>
         </div>
@@ -222,5 +231,12 @@
       }, 500);
     });
   </script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <button class="music-toggle" aria-label="Toggle calming music">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>

@@ -17,6 +17,7 @@
   <link rel="canonical" href="https://re-el-branding.rf.gd/pages/team_section.html" />
   <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
   <link rel="stylesheet" href="../css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -35,60 +36,71 @@
         <a href="homepage.html#services">Services</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="about.html">About</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
         <a href="contact.html" class="cta-button">Contact</a>
       </nav>
     </div>
   </header>
 
   <main style="padding-top: 80px;">
-    <section class="section section-gradient" style="min-height: 400px; display: flex; align-items: center;">
+    <section class="hero" style="min-height: 460px; display: flex; align-items: center; background-image: linear-gradient(rgba(0, 31, 63, 0.75), rgba(0, 31, 63, 0.75)), url('../public/assets/images/home-bg.jpg'); background-size: cover; background-position: center;">
       <div class="container">
-        <h1 style="margin-bottom: 1.5rem; text-align: center;">Meet Our Team</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 0;">The passionate professionals behind Re-EL's success</p>
+        <div class="hero-content">
+          <span class="eyebrow reveal-item">The People</span>
+          <h1 class="reveal-item delay-1" style="color: var(--primary-yellow); margin-bottom: 1.5rem;">Meet The Minds Behind Re-EL</h1>
+          <p class="reveal-item delay-2" style="color: white;">A passionate collective of designers, developers, and strategists dedicated to crafting exceptional digital experiences — and the results that follow.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'})">See The Team</button>
+            <button class="btn btn-secondary" onclick="window.location.href='about.html'">Our Story</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section section-light">
+    <section class="section section-light" id="team">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 3rem;">Our Creative Minds</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍💼</div>
+          <div class="card reveal-item" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="user-round" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Alex Thompson</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Creative Director & Founder</p>
             <p>Visionary leader with 15+ years in digital innovation. Alex drives our creative strategy and ensures excellence in every project.</p>
             <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">Expertise: Brand Strategy, Creative Direction, Client Relations</p>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">👩‍💻</div>
+          <div class="card reveal-item delay-1" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="code" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Jessica Wong</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Lead Developer</p>
             <p>Full-stack developer with expertise in modern web technologies. Jessica builds robust, scalable applications that exceed expectations.</p>
             <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">Expertise: React, Node.js, Full-stack Development, DevOps</p>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+          <div class="card reveal-item delay-2" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="palette" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Marcus Silva</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">UX/UI Designer</p>
             <p>Award-winning designer focused on creating beautiful, user-centric digital experiences. Marcus brings creativity to every pixel.</p>
             <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">Expertise: UI Design, User Research, Design Systems, Branding</p>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+          <div class="card reveal-item delay-3" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="smartphone" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Amelia Rodriguez</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Mobile App Developer</p>
             <p>Specialist in iOS and Android development. Amelia creates intuitive mobile experiences that users love and engage with.</p>
             <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">Expertise: iOS, Android, React Native, Mobile Architecture</p>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+          <div class="card reveal-item delay-4" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="bar-chart-3" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Daniel Okafor</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Digital Marketing Strategist</p>
             <p>Data-driven marketer who turns insights into growth. Daniel crafts compelling campaigns that drive results and engagement.</p>
             <p style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">Expertise: SEO, Content Marketing, Analytics, Campaign Management</p>
           </div>
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+          <div class="card reveal-item delay-5" style="text-align: center;">
+            <div style="color: var(--primary-yellow); margin-bottom: 1rem;"><i data-lucide="settings" class="lucide" style="width:44px;height:44px;"></i></div>
             <h3 style="margin-bottom: 0.5rem;">Sophia Müller</h3>
             <p style="color: var(--primary-yellow); margin-bottom: 1rem; font-weight: 600;">Project Manager</p>
             <p>Organized and detail-oriented project manager. Sophia ensures every project runs smoothly and exceeds client expectations.</p>
@@ -100,7 +112,8 @@
 
     <section class="section section-navy">
       <div class="container" style="text-align: center;">
-        <h2 style="color: var(--text-light); margin-bottom: 2rem;">Work With Our Team</h2>
+        <div class="star-item reveal-item" style="margin-bottom: 1rem;"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></div>
+        <h2 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 2rem;">Work With Our Team</h2>
         <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Ready to bring your vision to life with our talented team? Let's create something amazing together.</p>
         <div class="hero-buttons" style="justify-content: center;">
           <button class="btn btn-primary" onclick="window.location.href='contact.html'">Get In Touch</button>
@@ -128,5 +141,14 @@
   <script>
     AOS.init({duration: 1000, once: true, offset: 100});
   </script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <button class="music-toggle" aria-label="Toggle calming music">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+  <script>if (window.lucide) lucide.createIcons();</script>
 </body>
 </html>
