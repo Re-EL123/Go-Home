@@ -50,7 +50,7 @@
           <p class="reveal-item delay-2" style="color: rgba(255,255,255,0.92);">Late arrivals, long breaks and payday disputes quietly cost you money. Clock-Kit lets staff clock in and out from any phone and gives managers a live dashboard — so hours stay accurate and nobody argues at payday.</p>
           <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
             <button class="btn btn-primary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20book%20a%2020-minute%20Clock-Kit%20demo.', '_blank')">Book a Free Demo</button>
-            <button class="btn btn-secondary" type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Start 30-Day Free Trial</button>
+            <button class="btn btn-secondary" type="button" onclick="document.getElementById('book-demo').scrollIntoView({behavior: 'smooth'})">Start 30-Day Free Trial</button>
           </div>
           <div class="hero-stats reveal-item delay-4">
             <div class="stat">
@@ -172,55 +172,54 @@
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section section-light" id="pricing">
+    <!-- Get Started (WhatsApp form) -->
+    <section class="section section-light" id="book-demo">
       <div class="container">
         <div class="section-header reveal-text">
-          <span class="eyebrow">Pricing</span>
-          <h2>Simple, Per-Site Pricing</h2>
-          <p>Pay per site, not per head. Start free and upgrade when you're ready.</p>
+          <span class="eyebrow">Get Started</span>
+          <h2>Try Clock-Kit Free for 30 Days</h2>
+          <p>No pricing pages or card details — message us and we'll set your trial up for you.</p>
           <svg class="draw-line" viewBox="0 0 200 2" aria-hidden="true"><line x1="0" y1="1" x2="200" y2="1"></line></svg>
         </div>
-        <!-- TODO: confirm final pricing with the owner before launch -->
-        <div class="packages">
-          <div class="package-card featured reveal-item">
-            <span class="tier">30-Day Free Trial</span>
-            <h4>Try Every Feature</h4>
-            <div class="pkg-price">R0</div>
-            <ul>
-              <li><i data-lucide="check" class="lucide"></i> Up to 30 staff</li>
-              <li><i data-lucide="check" class="lucide"></i> Live dashboard &amp; reports</li>
-              <li><i data-lucide="check" class="lucide"></i> No card required</li>
-              <li><i data-lucide="check" class="lucide"></i> We set you up in a call</li>
-            </ul>
-            <button class="btn btn-primary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20start%20the%2030-day%20Clock-Kit%20free%20trial.', '_blank')">Start Free Trial</button>
+
+        <div style="max-width: 860px; margin: 0 auto;">
+          <div class="card reveal-item">
+            <h3 style="margin-bottom: 1.75rem;">Request your free setup</h3>
+            <form id="clockkitForm" onsubmit="return false;">
+              <div class="form-group">
+                <label for="ck-name">Your Full Name *</label>
+                <input type="text" id="ck-name" name="ck-name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="ck-company">Company / Business Name *</label>
+                <input type="text" id="ck-company" name="ck-company" required placeholder="ABC Security Group">
+              </div>
+              <div class="form-group">
+                <label for="ck-staff">Approx. Number of Staff *</label>
+                <select id="ck-staff" name="ck-staff" required>
+                  <option value="">Select a range...</option>
+                  <option value="1 - 10 staff">1 - 10</option>
+                  <option value="11 - 30 staff">11 - 30</option>
+                  <option value="31 - 100 staff">31 - 100</option>
+                  <option value="100+ staff">100+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ck-message">Where will you use it?</label>
+                <textarea id="ck-message" name="ck-message" placeholder="e.g. One retail site in Soweto, two sites in Sandton..." style="min-height: 100px; resize: vertical;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1rem; cursor: pointer;">
+                <i data-lucide="message-circle" class="lucide" style="width: 18px; height: 18px; vertical-align: middle;"></i>&nbsp; Send via WhatsApp
+              </button>
+            </form>
           </div>
-          <div class="package-card reveal-item delay-1">
-            <span class="tier">Pro</span>
-            <h4>Up to 30 Staff</h4>
-            <div class="pkg-price">R499 <small style="font-size:0.9rem;">/site/month</small></div>
-            <ul>
-              <li><i data-lucide="check" class="lucide"></i> Everything in the trial</li>
-              <li><i data-lucide="check" class="lucide"></i> Overtime &amp; leave tracking</li>
-              <li><i data-lucide="check" class="lucide"></i> CSV payroll export</li>
-              <li><i data-lucide="check" class="lucide"></i> Email support</li>
-            </ul>
-            <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20go%20Pro%20on%20Clock-Kit.', '_blank')">Go Pro</button>
-          </div>
-          <div class="package-card reveal-item delay-2">
-            <span class="tier">Business</span>
-            <h4>Unlimited Staff</h4>
-            <div class="pkg-price">R999 <small style="font-size:0.9rem;">/site/month</small></div>
-            <ul>
-              <li><i data-lucide="check" class="lucide"></i> Unlimited staff &amp; sites</li>
-              <li><i data-lucide="check" class="lucide"></i> Payroll / API integrations</li>
-              <li><i data-lucide="check" class="lucide"></i> Multi-site reporting</li>
-              <li><i data-lucide="check" class="lucide"></i> Priority support</li>
-            </ul>
-            <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20discuss%20the%20Clock-Kit%20Business%20plan.', '_blank')">Talk to Us</button>
+
+          <div class="reveal-item delay-2" style="margin-top: 2rem; padding: 2rem; background: rgba(255, 193, 7, 0.1); border-radius: 14px; text-align: center;">
+            <h3 style="margin-bottom: 1rem;">Prefer to just chat?</h3>
+            <p style="margin-bottom: 1rem;">Message us directly for a 20-minute demo or the 30-day free trial.</p>
+            <a href="https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20start%20the%2030-day%20Clock-Kit%20free%20trial." target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
           </div>
         </div>
-        <p class="reveal-item" style="text-align:center; color:#6b7280; font-size:0.88rem; margin-top:1.5rem;">One-time setup from R1,500 (branded logo, folders and custom roles). All prices in ZAR, excl. VAT.</p>
       </div>
     </section>
 
@@ -257,6 +256,36 @@
     AOS.init({ duration: 1000, once: true, offset: 100 });
   </script>
   <script src="../js/utils.js"></script>
+  <script>
+    // Clock-Kit free trial request -> WhatsApp
+    document.getElementById('clockkitForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var name = document.getElementById('ck-name').value.trim();
+      var company = document.getElementById('ck-company').value.trim();
+      var staff = document.getElementById('ck-staff').value;
+      var message = document.getElementById('ck-message').value.trim();
+
+      if (!name || !company || !staff) {
+        window.showErrorMessage('Please fill in all required fields');
+        return false;
+      }
+
+      var whatsappMessage =
+        'Clock-Kit Free Trial Request from Re-EL Website:%0A%0A' +
+        'Name: ' + encodeURIComponent(name) +
+        '%0ACompany: ' + encodeURIComponent(company) +
+        '%0AStaff: ' + encodeURIComponent(staff) +
+        '%0ANotes: ' + encodeURIComponent(message || 'Not provided');
+
+      var whatsappUrl = 'https://wa.me/27813864024?text=' + whatsappMessage;
+      window.showSuccessMessage('Opening WhatsApp...');
+      setTimeout(function () {
+        window.open(whatsappUrl, '_blank');
+        e.target.reset();
+      }, 500);
+    });
+  </script>
   <script src="../js/main.js"></script>
   <script src="../js/animations.js"></script>
   <script src="../js/store.js"></script>
