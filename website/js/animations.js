@@ -278,3 +278,39 @@ All vanilla JS. Colours & functionality preserved.
     initStarParticles();
   });
 })();
+
+/* ============================================================
+SCROLL PROGRESS BAR
+Fills #scroll-progress (top of the page) as the user scrolls.
+Vanilla, rAF-throttled, respects reduced motion.
+============================================================ */
+(function () {
+  'use strict';
+
+  var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  var ticking = false;
+  function update() {
+    var doc = document.documentElement;
+    var max = (doc.scrollHeight - window.innerHeight) || 1;
+    var pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+    bar.style.width = pct.toFixed(2) + '%';
+    ticking = false;
+  }
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+
+  if (REDUCED) {
+    bar.style.transition = 'none';
+  }
+})();

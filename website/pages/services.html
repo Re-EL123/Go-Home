@@ -72,6 +72,11 @@
             </div>
           </div>
         </div>
+        <div class="category-chips reveal-item delay-4">
+          <button class="category-chip" onclick="document.getElementById('graphic-design').scrollIntoView({behavior:'smooth'})" type="button"><i data-lucide="palette" class="lucide"></i> Graphic Design</button>
+          <button class="category-chip" onclick="document.getElementById('web-services').scrollIntoView({behavior:'smooth'})" type="button"><i data-lucide="monitor" class="lucide"></i> Web &amp; App</button>
+          <button class="category-chip" onclick="document.getElementById('app-services').scrollIntoView({behavior:'smooth'})" type="button"><i data-lucide="smartphone" class="lucide"></i> Mobile Apps</button>
+        </div>
       </div>
       <button class="scroll-hint" data-target="#graphic-design" aria-label="Scroll to services">
         <svg class="scroll-hint-wave" viewBox="0 0 30 22" aria-hidden="true">
@@ -552,6 +557,7 @@
  <script src="../js/main.js"></script>
  <script src="../js/animations.js"></script>
  <script src="../js/store.js"></script>
+  <script src="../js/nav.js"></script>
  <button class="music-toggle" aria-label="Toggle calming music">
    <i data-lucide="volume-2" class="music-icon lucide"></i>
    <span class="music-label">Music On</span>

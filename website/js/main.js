@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
   setupEventListeners();
   initializeLucideIcons();
-  setupFormHandlers();
+  // NOTE: form submission is handled by each page's inline handler + utils.js
+  // (setupFormHandlers was removed to avoid double-firing the WhatsApp submit).
   setupScrollAnimations();
   setupMobileMenu();
   setupAOS();

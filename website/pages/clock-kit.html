@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock-Kit | Workforce Time-Tracking Apps by Re-EL</title>
+  <meta name="description" content="Clock-Kit lets South African businesses clock staff in and out from any phone, with a live dashboard and payday-ready reports. Try it free for 30 days.">
+  <link rel="icon" href="../public/assets/images/celebrate.png" type="image/png">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="../public/assets/images/logo-no-bg.png" alt="Re-EL" style="height: 40px; width: auto; display: inline;">
+        <span style="margin-left: 8px; vertical-align: middle;">Re-EL</span>
+      </div>
+      <nav>
+        <a href="homepage.html">Home</a>
+        <a href="homepage.html#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="clock-kit.html" class="nav-active">Clock-Kit</a>
+        <a href="cart.html" class="cart-link" aria-label="View cart">
+          <i data-lucide="shopping-cart" class="lucide"></i>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="contact.html" class="cta-button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 80px;">
+    <!-- Hero -->
+    <section class="hero" style="min-height: 560px; display: flex; align-items: center; background-image: linear-gradient(rgba(0,31,63,0.82), rgba(0,31,63,0.62)), url('../public/assets/images/bg-hero.jpg'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-badge reveal-item">
+            <i data-lucide="timer" class="lucide"></i>
+            Workforce Management App · Built by Re-EL
+          </span>
+          <h1 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 1.5rem;">Honest Hours for <span class="hl">Every Workforce</span></h1>
+          <p class="reveal-item delay-2" style="color: rgba(255,255,255,0.92);">Late arrivals, long breaks and payday disputes quietly cost you money. Clock-Kit lets staff clock in and out from any phone and gives managers a live dashboard — so hours stay accurate and nobody argues at payday.</p>
+          <div class="hero-buttons reveal-item delay-3" style="margin-top: 2rem;">
+            <button class="btn btn-primary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20book%20a%2020-minute%20Clock-Kit%20demo.', '_blank')">Book a Free Demo</button>
+            <button class="btn btn-secondary" type="button" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Start 30-Day Free Trial</button>
+          </div>
+          <div class="hero-stats reveal-item delay-4">
+            <div class="stat">
+              <div class="stat-number">Live</div>
+              <div class="stat-label">Clock In/Out</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">Payday</div>
+              <div class="stat-label">Accurate Reports</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">30</div>
+              <div class="stat-label">Trial Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Cost of an Unmanaged Floor -->
+    <section class="section section-navy">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <span class="eyebrow">The Problem</span>
+          <h2 style="color: var(--text-light);">The Cost You Never See</h2>
+          <p style="color: rgba(255,255,255,0.85);">Paper registers and memory aren't just old-fashioned — they leak money every single week.</p>
+          <svg class="draw-line" viewBox="0 0 200 2" aria-hidden="true"><line x1="0" y1="1" x2="200" y2="1"></line></svg>
+        </div>
+        <div class="grid grid--cols-3">
+          <div class="pain-card reveal-item">
+            <div class="pain-stat">15 min/day</div>
+            <h3>Time Theft</h3>
+            <p>Late-ins and long breaks per person add up to real Rands by month-end — most of it never noticed.</p>
+          </div>
+          <div class="pain-card reveal-item delay-1">
+            <div class="pain-stat">Payday</div>
+            <h3>Disputes</h3>
+            <p>Hours argued from someone's memory cost you goodwill, admin time and sometimes money.</p>
+          </div>
+          <div class="pain-card reveal-item delay-2">
+            <div class="pain-stat">Coverage</div>
+            <h3>Gaps</h3>
+            <p>Nobody on the floor knows who is actually in — so shifts run short and customers feel it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-light" id="features">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <span class="eyebrow">Features</span>
+          <h2>What Clock-Kit Does</h2>
+          <p>Everything a manager needs to keep a site honest — nothing they don't.</p>
+          <svg class="draw-line" viewBox="0 0 200 2" aria-hidden="true"><line x1="0" y1="1" x2="200" y2="1"></line></svg>
+        </div>
+        <div class="grid grid--cols-3">
+          <div class="card reveal-item">
+            <div class="card-icon"><i data-lucide="smartphone" class="lucide"></i></div>
+            <h3>One-Tap Clock In/Out</h3>
+            <p>Staff punch from any phone or site terminal — with photo and location proof on every entry.</p>
+          </div>
+          <div class="card reveal-item delay-1">
+            <div class="card-icon"><i data-lucide="layout-dashboard" class="lucide"></i></div>
+            <h3>Live Dashboard</h3>
+            <p>See who is in, out or on break right now — from the office or on the move.</p>
+          </div>
+          <div class="card reveal-item delay-2">
+            <div class="card-icon"><i data-lucide="clock" class="lucide"></i></div>
+            <h3>Breaks &amp; Overtime</h3>
+            <p>Lunch timeouts, late and early flags, and automatic overtime totals per worker.</p>
+          </div>
+          <div class="card reveal-item">
+            <div class="card-icon"><i data-lucide="file-bar-chart" class="lucide"></i></div>
+            <h3>Payday-Ready Reports</h3>
+            <p>Exact hours per worker at month-end, exported as CSV — straight into your payroll.</p>
+          </div>
+          <div class="card reveal-item delay-1">
+            <div class="card-icon"><i data-lucide="calendar-check-2" class="lucide"></i></div>
+            <h3>Leave &amp; Shift Cover</h3>
+            <p>Simple leave requests, approvals and shift swaps — no more side conversations.</p>
+          </div>
+          <div class="card reveal-item delay-2">
+            <div class="card-icon"><i data-lucide="bell-ring" class="lucide"></i></div>
+            <h3>Smart Alerts</h3>
+            <p>Managers are notified the moment someone is late or a site is short-staffed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (reuses homepage process styles) -->
+    <section class="section section-gradient" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <span class="eyebrow">How It Works</span>
+          <h2>Live Within a Week</h2>
+          <p>No training decks. No hardware. Just three steps to honest hours.</p>
+          <svg class="draw-line" viewBox="0 0 200 2" aria-hidden="true"><line x1="0" y1="1" x2="200" y2="1"></line></svg>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal-item">
+            <div class="step-num">01</div>
+            <h3>Start Free</h3>
+            <p>Sign up for the 30-day free trial — all features, up to 30 staff, no card needed.</p>
+          </div>
+          <div class="process-step reveal-item delay-1">
+            <div class="step-num">02</div>
+            <h3>Staff Clock In</h3>
+            <p>Your team clocks in and out from their phones. No training required.</p>
+          </div>
+          <div class="process-step reveal-item delay-2">
+            <div class="step-num">03</div>
+            <h3>Save at Payday</h3>
+            <p>Pull exact, dispute-free hours at month-end and export straight to payroll.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section-light" id="pricing">
+      <div class="container">
+        <div class="section-header reveal-text">
+          <span class="eyebrow">Pricing</span>
+          <h2>Simple, Per-Site Pricing</h2>
+          <p>Pay per site, not per head. Start free and upgrade when you're ready.</p>
+          <svg class="draw-line" viewBox="0 0 200 2" aria-hidden="true"><line x1="0" y1="1" x2="200" y2="1"></line></svg>
+        </div>
+        <!-- TODO: confirm final pricing with the owner before launch -->
+        <div class="packages">
+          <div class="package-card featured reveal-item">
+            <span class="tier">30-Day Free Trial</span>
+            <h4>Try Every Feature</h4>
+            <div class="pkg-price">R0</div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Up to 30 staff</li>
+              <li><i data-lucide="check" class="lucide"></i> Live dashboard &amp; reports</li>
+              <li><i data-lucide="check" class="lucide"></i> No card required</li>
+              <li><i data-lucide="check" class="lucide"></i> We set you up in a call</li>
+            </ul>
+            <button class="btn btn-primary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20start%20the%2030-day%20Clock-Kit%20free%20trial.', '_blank')">Start Free Trial</button>
+          </div>
+          <div class="package-card reveal-item delay-1">
+            <span class="tier">Pro</span>
+            <h4>Up to 30 Staff</h4>
+            <div class="pkg-price">R499 <small style="font-size:0.9rem;">/site/month</small></div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Everything in the trial</li>
+              <li><i data-lucide="check" class="lucide"></i> Overtime &amp; leave tracking</li>
+              <li><i data-lucide="check" class="lucide"></i> CSV payroll export</li>
+              <li><i data-lucide="check" class="lucide"></i> Email support</li>
+            </ul>
+            <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20go%20Pro%20on%20Clock-Kit.', '_blank')">Go Pro</button>
+          </div>
+          <div class="package-card reveal-item delay-2">
+            <span class="tier">Business</span>
+            <h4>Unlimited Staff</h4>
+            <div class="pkg-price">R999 <small style="font-size:0.9rem;">/site/month</small></div>
+            <ul>
+              <li><i data-lucide="check" class="lucide"></i> Unlimited staff &amp; sites</li>
+              <li><i data-lucide="check" class="lucide"></i> Payroll / API integrations</li>
+              <li><i data-lucide="check" class="lucide"></i> Multi-site reporting</li>
+              <li><i data-lucide="check" class="lucide"></i> Priority support</li>
+            </ul>
+            <button class="btn btn-secondary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20discuss%20the%20Clock-Kit%20Business%20plan.', '_blank')">Talk to Us</button>
+          </div>
+        </div>
+        <p class="reveal-item" style="text-align:center; color:#6b7280; font-size:0.88rem; margin-top:1.5rem;">One-time setup from R1,500 (branded logo, folders and custom roles). All prices in ZAR, excl. VAT.</p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-navy">
+      <div class="container" style="text-align: center;">
+        <div class="star-item reveal-item" style="margin-bottom: 1rem;"><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span><span class="star-particle"></span></div>
+        <h2 class="reveal-item delay-1" style="color: var(--text-light); margin-bottom: 1rem;">See It Live in 20 Minutes</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 2rem;">Book a quick demo and we'll have Clock-Kit running on your site before the call ends.</p>
+        <div class="hero-buttons" style="justify-content: center;">
+          <button class="btn btn-primary" type="button" onclick="window.open('https://wa.me/27813864024?text=Hi%20Re-EL!%20I%27d%20like%20to%20book%20a%2020-minute%20Clock-Kit%20demo.', '_blank')">Book a Free Demo</button>
+          <button class="btn btn-secondary" style="color: var(--text-light); border-color: var(--text-light);" type="button" onclick="window.location.href='contact.html'">Request More Info</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align: center;">
+      <div class="logo" style="margin-bottom: 2rem; color: var(--text-light);">Re<span style="color: var(--primary-yellow);">-</span>EL</div>
+      <p style="margin-bottom: 1rem; color: rgba(255, 255, 255, 0.8);">Creative Excellence in Design, Development & Branding</p>
+      <p style="margin-bottom: 2rem; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">© 2026 Re-EL. All rights reserved. | Johannesburg, South Africa</p>
+      <nav style="gap: 2rem; justify-content: center; margin-bottom: 2rem;">
+        <a href="homepage.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Home</a>
+        <a href="about.html" style="color: var(--primary-yellow); font-size: 0.9rem;">About</a>
+        <a href="portfolio.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Portfolio</a>
+        <a href="contact.html" style="color: var(--primary-yellow); font-size: 0.9rem;">Contact</a>
+        <a href="https://wa.me/27813864024" target="_blank" style="color: var(--primary-yellow); font-size: 0.9rem;">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true, offset: 100 });
+  </script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/store.js"></script>
+  <script src="../js/nav.js"></script>
+  <button class="music-toggle" aria-label="Toggle calming music" aria-pressed="false">
+    <i data-lucide="volume-2" class="music-icon lucide"></i>
+    <span class="music-label">Music On</span>
+  </button>
+  <script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>
