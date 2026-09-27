@@ -1,0 +1,70 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import MainSection from '@components/ui/blocks/MainSection.astro';
+import LeftSection from '@components/ui/blocks/LeftSection.astro';
+import RightSection from '@components/ui/blocks/RightSection.astro';
+import FeaturesStats from '@components/sections/features/FeaturesStats.astro';
+import brandingImg from '@images/reel-branding.png';
+import webImg from '@images/reel-web.png';
+import appsImg from '@images/reel-apps.png';
+import { SITE } from '@data/constants';
+
+const pageTitle = `Services | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription="Explore Re-EL's digital services: graphic design, web development, app development, and branding for South African businesses."
+  customOgTitle="Services - Re-EL Digital Agency"
+>
+  <MainSection
+    title="Services Built Around Your Brand"
+    subTitle="From graphic design and web development to mobile apps — transparent South African pricing and end-to-end delivery for growing businesses."
+    btnExists={true}
+    btnTitle="Browse Graphic Design Cart"
+    btnURL="/cart"
+  />
+
+  <LeftSection
+    title="Graphic Design & Brand Identity"
+    subTitle="Logo design, business cards, flyers, posters, brochures, banners, and full rebrand packages. Add items to your cart for a WhatsApp quote — all prices in ZAR, excl. VAT. Logo from R650, business cards from R180."
+    img={brandingImg}
+    imgAlt="Re-EL graphic design services"
+    btnExists={true}
+    btnTitle="View Pricing & Add to Cart"
+    btnURL="/cart"
+  />
+
+  <RightSection
+    title="Web Development & Digital Platforms"
+    subTitle="Custom responsive websites, web apps, e-commerce stores, and landing pages engineered for speed, SEO, and conversion. We handle strategy, design, build, and launch with ongoing support."
+    single={true}
+    imgOne={webImg}
+    imgOneAlt="Re-EL web development"
+    btnExists={true}
+    btnTitle="Book a Web Consultation"
+    btnURL="/contact"
+  />
+
+  <LeftSection
+    title="App Development"
+    subTitle="Android, iOS and cross-platform applications — from MVP to production. UI/UX design, development, testing, and deployment with a team that keeps you in the loop at every milestone."
+    img={appsImg}
+    imgAlt="Re-EL app development"
+    btnExists={true}
+    btnTitle="Discuss Your App Idea"
+    btnURL={SITE.whatsapp}
+  />
+
+  <FeaturesStats
+    title="By the Numbers"
+    subTitle="Our commitment to quality and client success is evident in every project — from solo founders to established brands across Gauteng."
+    mainStatTitle="98%"
+    mainStatSubTitle="client satisfaction across design, web and app projects"
+    stats={[
+      { stat: '20+', description: 'graphic design items in our catalog' },
+      { stat: '3', description: 'app platforms: Android, iOS & web' },
+      { stat: '150+', description: 'projects delivered since launch' },
+    ]}
+  />
+</MainLayout>

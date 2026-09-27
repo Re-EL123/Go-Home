@@ -1,0 +1,39 @@
+{
+  "title": "Simple, Transparent Pricing",
+  "subTitle": "Affordable ZAR packages for design, web, and app projects — add items to your cart or book a custom build.",
+  "badge": "Best value",
+  "thirdOption": "Need a custom enterprise solution?",
+  "btnText": "Get a Custom Quote",
+
+  "starterKit": {
+    "name": "Brand Starter",
+    "description": "Best for new businesses & startups",
+    "price": "650",
+    "cents": "",
+    "billingFrequency": "ZAR · logo design from",
+    "features": [
+      "Logo & basic brand identity",
+      "Business card & social kit",
+      "Print-ready file delivery",
+      "WhatsApp quote support"
+    ],
+    "purchaseBtnTitle": "Browse Graphic Design",
+    "purchaseLink": "/services"
+  },
+
+  "professionalToolbox": {
+    "name": "Digital Growth",
+    "description": "Best for scaling brands",
+    "price": "4,500",
+    "cents": "",
+    "billingFrequency": "ZAR · website from",
+    "features": [
+      "Custom responsive website",
+      "SEO-ready structure",
+      "Priority project support",
+      "Launch & post-launch care"
+    ],
+    "purchaseBtnTitle": "View Web Services",
+    "purchaseLink": "/services"
+  }
+}

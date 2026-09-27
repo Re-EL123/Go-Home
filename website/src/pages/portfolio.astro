@@ -1,0 +1,73 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import MainSection from '@components/ui/blocks/MainSection.astro';
+import { Image } from 'astro:assets';
+import brandingImg from '@images/reel-branding.png';
+import webImg from '@images/reel-web.png';
+import appsImg from '@images/reel-apps.png';
+import { SITE } from '@data/constants';
+
+const pageTitle = `Portfolio | ${SITE.title}`;
+
+const projects = [
+  {
+    title: 'Brand Identity & Print',
+    category: 'Graphic Design',
+    description: 'Logo systems, business cards, flyers, and full brand kits for local businesses.',
+    image: brandingImg,
+  },
+  {
+    title: 'Websites & Web Apps',
+    category: 'Web Development',
+    description: 'Responsive sites, e-commerce, and custom web platforms built for conversion.',
+    image: webImg,
+  },
+  {
+    title: 'Mobile Applications',
+    category: 'App Development',
+    description: 'Android, iOS and cross-platform apps with polished UI and reliable performance.',
+    image: appsImg,
+  },
+];
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription="Explore Re-EL's portfolio of branding, web development, and app design work for South African businesses."
+  customOgTitle="Re-EL Portfolio - Design & Development"
+>
+  <MainSection
+    title="Work That Speaks for Itself"
+    subTitle="A selection of the branding, web, and app projects we've delivered for clients across Johannesburg and South Africa."
+    btnExists={true}
+    btnTitle="Discuss Your Project"
+    btnURL="/contact"
+  />
+
+  <section class="mx-auto max-w-[85rem] px-4 pb-16 sm:px-6 lg:px-8">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map(project => (
+        <article class="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
+          <Image
+            src={project.image}
+            alt={project.title}
+            class="h-48 w-full object-cover"
+            widths={[400, 600]}
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+          <div class="p-6">
+            <p class="text-sm font-semibold text-yellow-600 dark:text-yellow-400">{project.category}</p>
+            <h3 class="mt-2 text-xl font-bold text-neutral-800 dark:text-neutral-200">{project.title}</h3>
+            <p class="mt-3 text-neutral-600 dark:text-neutral-400">{project.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="mt-12 text-center">
+      <p class="text-neutral-600 dark:text-neutral-400">
+        Want to see case studies for your industry?
+        <a href={SITE.whatsapp} class="font-semibold text-yellow-600 hover:underline dark:text-yellow-400">Message us on WhatsApp</a>
+      </p>
+    </div>
+  </section>
+</MainLayout>

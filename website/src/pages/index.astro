@@ -1,0 +1,139 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import HeroSection from '@components/sections/landing/HeroSection.astro';
+import HeroSectionAlt from '@components/sections/landing/HeroSectionAlt.astro';
+import ClientsSection from '@components/sections/landing/ClientsSection.astro';
+import FeaturesGeneral from '@components/sections/features/FeaturesGeneral.astro';
+import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro';
+import TestimonialsSection from '@components/sections/testimonials/TestimonialsSection.astro';
+import PricingSection from '@components/sections/pricing/PricingSection.astro';
+import FAQ from '@components/sections/misc/FAQ.astro';
+import AnnouncementBanner from '@components/ui/banners/AnnouncementBanner.astro';
+import heroImage from '@images/reel-hero.jpg';
+import featureImage from '@images/reel-branding.png';
+import brandingImg from '@images/reel-branding.png';
+import webImg from '@images/reel-web.png';
+import appsImg from '@images/reel-apps.png';
+import faqs from '@data/faqs.json';
+import features from '@data/features.json';
+import pricing from '@data/pricing.json';
+import { partnersData, SITE } from '@/data_files/constants';
+
+const avatarSrcs: Array<string> = [
+  `${import.meta.env.BASE_URL}assets/images/creative-director.png`,
+  `${import.meta.env.BASE_URL}assets/images/project-manager.png`,
+  `${import.meta.env.BASE_URL}assets/images/logo-no-bg.png`,
+];
+---
+
+<MainLayout>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Chat on WhatsApp"
+    url={SITE.whatsapp}
+  />
+
+  <HeroSection
+    title=`Build a Brand That <span class="text-yellow-500 dark:text-yellow-400">Lights Up</span> Your Market`
+    subTitle="Websites, apps and brand identities engineered to win attention and grow revenue — designed in Johannesburg, built for modern business."
+    primaryBtn="Explore Services"
+    primaryBtnURL="/services"
+    secondaryBtn="Chat on WhatsApp"
+    secondaryBtnURL={SITE.whatsapp}
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.9</span> / 5`
+    starCount={5}
+    reviews=`From <span class="font-bold">150+</span> Projects Delivered`
+    src={heroImage}
+    alt="Re-EL digital branding and design workspace"
+  />
+
+  <ClientsSection
+    title="Trusted by Growing Brands"
+    subTitle="Startups and established businesses across South Africa choose Re-EL."
+    partners={partnersData}
+  />
+
+  <FeaturesGeneral
+    title="Meeting Modern Business Demands"
+    subTitle="At Re-EL, we tackle the unique challenges of building a standout brand online. From logo design to full-stack development, we're dedicated to helping you overcome obstacles and achieve your goals."
+    src={featureImage}
+    alt="Re-EL branding and graphic design showcase"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">Re-EL</span>'s services to perfectly suit your brand and business needs.`
+    tabs={[
+      {
+        heading: 'Graphic Design & Branding',
+        content:
+          'Logo design, brand identity, print collateral, and visual systems that capture your essence and resonate with your audience — with transparent ZAR pricing.',
+        svg: 'tools',
+        src: brandingImg,
+        alt: 'Re-EL graphic design and branding work',
+        first: true,
+      },
+      {
+        heading: 'Web Development',
+        content:
+          'Custom websites, web apps, and e-commerce stores built for performance, SEO, and conversion — from landing pages to full digital platforms.',
+        svg: 'dashboard',
+        src: webImg,
+        alt: 'Re-EL web development projects',
+        second: true,
+      },
+      {
+        heading: 'App Development',
+        content:
+          'Android, iOS and cross-platform apps — strategy, UI/UX design, and development that drive engagement and keep your business in your customers\' pockets.',
+        svg: 'house',
+        src: appsImg,
+        alt: 'Re-EL mobile app development',
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Fast-Track Your Brand"
+    subTitle="At Re-EL, we ensure a swift start with a free consultation. Experience creative excellence with a team that responds fast and delivers on time."
+    testimonials={[
+      {
+        content:
+          'The new website more than doubled our online enquiries in the first month. Re-EL truly understood what we needed — professional, on time and worth every rand.',
+        author: 'Brand Manager',
+        role: 'Johannesburg · Re-EL Client',
+        avatarSrc: `${import.meta.env.BASE_URL}assets/images/creative-director.png`,
+      },
+    ]}
+    statistics={[
+      {
+        count: '150+',
+        description: 'projects delivered across design, web and app',
+      },
+      {
+        count: '98%',
+        description: 'client satisfaction rate reported by our clients',
+      },
+      {
+        count: '12+',
+        description: 'years of combined creative experience on the team',
+      },
+      {
+        count: '2x',
+        description: 'average uplift in online enquiries after a new site launch',
+      },
+    ]}
+  />
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Let's Build Together"
+    subTitle="Ready to elevate your business? Book a consultation or start a WhatsApp conversation — we'll transform your vision into reality."
+    url={SITE.whatsapp}
+  />
+</MainLayout>

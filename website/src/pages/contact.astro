@@ -1,0 +1,22 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import ContactSection from '@components/sections/misc/ContactSection.astro';
+import { SITE } from '@data/constants';
+
+const pageTitle = `Contact | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription="Get in touch with Re-EL. Book a consultation or submit a service enquiry for design, web, and app projects in South Africa."
+  customOgTitle="Contact Re-EL - Book Your Consultation"
+  structuredData={{
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    url: `${SITE.url}/website/contact`,
+    name: `Contact | ${SITE.title}`,
+    description: 'Contact Re-EL digital agency in Johannesburg.',
+  }}
+>
+  <ContactSection />
+</MainLayout>

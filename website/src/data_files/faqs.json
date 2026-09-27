@@ -1,0 +1,29 @@
+{
+  "subTitle": "Ask us anything about our services, pricing, and process — honest answers from the Re-EL team.",
+  "faqs": [
+    {
+      "question": "What graphic design services do you offer?",
+      "answer": "We offer logo design, business cards, flyers, posters, brochures, banners, stickers, and full brand identity packages. All items have transparent ZAR pricing — browse our Services page and add items to your cart for a WhatsApp quote."
+    },
+    {
+      "question": "Do you build websites and mobile apps?",
+      "answer": "Yes. We develop custom responsive websites, web apps, e-commerce stores, and Android, iOS, and Windows applications. Every build is tailored to your business goals with clear milestones and local support."
+    },
+    {
+      "question": "How does the cart and quote process work?",
+      "answer": "Add graphic design items to your cart on the Services page, then send your order via WhatsApp. We'll confirm scope, timeline, and final pricing. For web and app projects, book a free consultation to get a custom proposal."
+    },
+    {
+      "question": "What kind of support can I expect after launch?",
+      "answer": "All clients receive dedicated email and WhatsApp support. We offer post-launch care, updates, and ongoing design retainers so your brand keeps performing as you grow."
+    },
+    {
+      "question": "Are you based in South Africa?",
+      "answer": "Yes — Re-EL is a Johannesburg-based creative agency. We work with clients across Gauteng and nationwide, with pricing in ZAR and an understanding of local market needs."
+    },
+    {
+      "question": "Can you handle large or multi-phase projects?",
+      "answer": "Absolutely. From full rebrands to complex web platforms, we follow a proven Discover → Design → Build → Launch process. Contact us for enterprise solutions and phased delivery plans."
+    }
+  ]
+}

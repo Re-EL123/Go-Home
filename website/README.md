@@ -1,82 +1,29 @@
-# HTML
+# Re-EL Website (ScrewFast / Astro)
 
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+Re-EL marketing site built on the [ScrewFast](https://themewagon.github.io/screwfast/) Astro + Tailwind template, customized with Re-EL branding, services, cart, and contact flows.
 
-## 🚀 Features
+## Develop
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Custom Components** - Pre-built component classes for buttons and containers
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
-
-## 📋 Prerequisites
-
-- Node.js (v12.x or higher)
-- npm or yarn
-
-## 🛠️ Installation
-
-1. Install dependencies:
 ```bash
+cd website
 npm install
-# or
-yarn install
-```
-
-2. Start the development server:
-```bash
 npm run dev
-# or
-yarn dev
 ```
 
-## 📁 Project Structure
+Open the URL shown in the terminal (typically `http://localhost:4321/website/`).
 
-```
-html_app/
-├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. Custom utility classes include:
-
-
-## 🧩 Customization
-
-To customize the Tailwind configuration, edit the `tailwind.config.js` file:
-
-
-## 📦 Build for Production
-
-Build the CSS for production:
+## Build
 
 ```bash
-npm run build:css
-# or
-yarn build:css
+npm run build
 ```
 
-## 📱 Responsive Design
+Static output is written to `website/dist/`. Publish that folder to your host (GitHub Pages, rf.gd, etc.) with base path `/website/`.
 
-The app is built with responsive design using Tailwind CSS breakpoints:
+## Legacy static site
 
-- `sm`: 640px and up
-- `md`: 768px and up
-- `lg`: 1024px and up
-- `xl`: 1280px and up
-- `2xl`: 1536px and up
+The previous HTML/CSS site is preserved in `../website-legacy/` for reference (services catalog, cart markup, team pages).
 
-## 🙏 Acknowledgments
+## Re-EL assets
 
-
-- Powered by HTML and Tailwind CSS
-
-
+Brand images live in `public/assets/images/`. Cart logic is in `public/js/store.js`.

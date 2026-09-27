@@ -1,0 +1,58 @@
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import MainSection from '@components/ui/blocks/MainSection.astro';
+import LeftSection from '@components/ui/blocks/LeftSection.astro';
+import RightSection from '@components/ui/blocks/RightSection.astro';
+import FeaturesStats from '@components/sections/features/FeaturesStats.astro';
+import visionImg from '@images/reel-branding.png';
+import valuesImg from '@images/reel-web.png';
+import { SITE } from '@data/constants';
+
+const pageTitle = `About | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription="Discover Re-EL's story, mission, and team. We're a creative digital agency in Johannesburg specializing in web development, app design, and brand building."
+  customOgTitle="About Re-EL - Creative Digital Agency"
+>
+  <MainSection
+    title="Building Legacies, Not Just Images"
+    subTitle="Re-EL is a creative powerhouse in Johannesburg dedicated to transforming visions into digital reality — through design, development, and branding that lasts."
+    btnExists={true}
+    btnTitle="Meet the Team on WhatsApp"
+    btnURL={SITE.whatsapp}
+  />
+
+  <LeftSection
+    title="Our Mission"
+    subTitle="To empower businesses and individuals by delivering innovative, high-quality digital solutions that combine creativity, technology, and strategic thinking. We believe in building lasting partnerships and taking pride in every project we undertake."
+    img={visionImg}
+    imgAlt="Re-EL creative vision"
+  />
+
+  <RightSection
+    title="Our Vision & Values"
+    subTitle="To be the leading creative digital agency in South Africa, recognized for excellence, innovation, and transformative work. Excellence, integrity, collaboration, and client-focused solutions form the core of everything we do."
+    single={false}
+    imgOne={valuesImg}
+    imgOneAlt="Re-EL values in action"
+    imgTwo={visionImg}
+    imgTwoAlt="Re-EL brand work"
+    btnExists={true}
+    btnTitle="Start a Project"
+    btnURL="/contact"
+  />
+
+  <FeaturesStats
+    title="Why Choose Re-EL?"
+    subTitle="Years of experience in digital transformation and creative excellence — with proven results for growing South African brands."
+    mainStatTitle="98%"
+    mainStatSubTitle="client satisfaction across 150+ delivered projects"
+    stats={[
+      { stat: '150+', description: 'successful projects delivered' },
+      { stat: '12+', description: 'years of creative experience' },
+      { stat: '3', description: 'core disciplines: design, web & app' },
+    ]}
+  />
+</MainLayout>
